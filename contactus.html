@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - ArtGram</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="css/contactus.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+  <!-- Fixed Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="universalNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🎨 ArtGram</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" data-page="home">Home</a>
+          </li>
+          
+          <!-- Universal Activities Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+               href="#" 
+               id="activitiesDropdown" 
+               role="button" 
+               data-bs-toggle="dropdown" 
+               aria-expanded="false">
+              Activities
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+              <li>
+                <a class="dropdown-item" href="slime-play.html">
+                  <div class="activity-icon">🌈</div>
+                  <div class="activity-details">
+                    <h6>Slime</h6>
+                    <p>Create colorful, stretchy slime</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="art-making-activity.html">
+                  <div class="activity-icon">🎨</div>
+                  <div class="activity-details">
+                    <h6>Art Making</h6>
+                    <p>Express creativity through painting</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="tufting-activity.html">
+                  <div class="activity-icon">🧶</div>
+                  <div class="activity-details">
+                    <h6>Tufting Experience</h6>
+                    <p>Create beautiful rugs & wall hangings</p>
+                  </div>
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="activities.html">
+                  <div class="activity-icon" style="background: var(--secondary); color: white;">📋</div>
+                  <div class="activity-details">
+                    <h6>View All Activities</h6>
+                    <p>See our complete range</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="events.html" data-page="events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html" data-page="shop">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ourstory.html" data-page="ourstory">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html" data-page="contact">Contact</a>
+          </li>
+        </ul>
+        <a href="book-session.html" class="btn btn-session">Book a Slime Session</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="display-5 fw-bold mb-4">Get in Touch</h1>
+      <p class="lead">We'd love to hear from you! Whether it's a question, feedback, or collaboration idea—drop us a message.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Form -->
+        <div class="col-md-7">
+          <h3 class="mb-4">Send Us a Message</h3>
+          <form id="contactForm" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name *</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message *</label>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary px-4">Submit Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-5 contact-info">
+          <h3 class="mb-4">Reach Us</h3>
+          <div class="mb-3">
+            <strong>Email:</strong> <a href="#" onclick="openGmail('artgram.yourhobbylobby@gmail.com')" style="cursor: pointer;">artgram.yourhobbylobby@gmail.com</a>
+          </div>
+          <div class="mb-3">
+            <strong>Phone:</strong> <a href="tel:+917358484266">+91 7358484266</a>
+          </div>
+          <div class="mb-3">
+            <strong>Instagram:</strong> <a href="https://www.instagram.com/artgram_yourhobbylobby/?hl=en" target="_blank" rel="noopener noreferrer">@artgram_yourhobbylobby</a>
+          </div>
+          <div class="mb-3">
+            <strong>Business Hours:</strong>
+          </div>
+          <ul class="list-unstyled">
+            <li>🕒 Monday - Saturday: 10:00 AM - 8:00 PM</li>
+            <li>🕒 Sunday: 10:00 AM - 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Branches Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title mb-5">Our Branches</h2>
+      <div class="row">
+        
+        <!-- Hyderabad Branch -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="branch-card">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                 alt="Charminar - Hyderabad" class="branch-image" loading="lazy">
+            <div class="branch-info">
+              <span class="landmark-tag">📍 Near Charminar</span>
+              <h4 class="branch-name">Hyderabad Branch</h4>
+              <p style="color: #64748b; margin-bottom: 10px;">
+                <strong>Address:</strong><br>
+                123 Art Street, Old City<br>
+                Hyderabad, Telangana 500002
+              </p>
+              <p style="color: #64748b; margin-bottom: 10px;">
+                <strong>Phone:</strong> +91 7358484266
+              </p>
+              <p style="color: #64748b; margin-bottom: 15px;">
+                <strong>Specialties:</strong> Slime Making, Traditional Art
+              </p>
+              
+              <!-- Contact Buttons -->
+              <div class="contact-buttons">
+                <a href="tel:+917358484266" class="btn-call">
+                  📞 Call Now
+                </a>
+                <button onclick="openWhatsApp('917358484266', 'Hi, I am interested in ArtGram activities in Hyderabad!')" class="btn-whatsapp">
+                  💬 WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bangalore Branch -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="branch-card">
+            <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                 alt="Bangalore Palace - Bangalore" class="branch-image" loading="lazy">
+            <div class="branch-info">
+              <span class="landmark-tag">📍 Near Bangalore Palace</span>
+              <h4 class="branch-name">Bangalore Branch</h4>
+              <p style="color: #64748b; margin-bottom: 10px;">
+                <strong>Address:</strong><br>
+                456 Creative Hub, Palace Road<br>
+                Bangalore, Karnataka 560052
+              </p>
+              <p style="color: #64748b; margin-bottom: 10px;">
+                <strong>Phone:</strong> +91 7358484266
+              </p>
+              <p style="color: #64748b; margin-bottom: 15px;">
+                <strong>Specialties:</strong> Digital Art, Tufting
+              </p>
+              
+              <!-- Contact Buttons -->
+              <div class="contact-buttons">
+                <a href="tel:+917358484266" class="btn-call">
+                  📞 Call Now
+                </a>
+                <button onclick="openWhatsApp('917358484266', 'Hi, I am interested in ArtGram activities in Bangalore!')" class="btn-whatsapp">
+                  💬 WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vijayawada Branch -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="branch-card">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                 alt="Prakasam Barrage - Vijayawada" class="branch-image" loading="lazy">
+            <div class="branch-info">
+              <span class="landmark-tag">📍 Near Prakasam Barrage</span>
+              <h4 class="branch-name">Vijayawada Branch</h4>
+              <p style="color: #64748b; margin-bottom: 10px;">
+                <strong>Address:</strong><br>
+                789 River View Complex<br>
+                Vijayawada, Andhra Pradesh 520001
+              </p>
+              <p style="color: #64748b; margin-bottom: 10px;">
+                <strong>Phone:</strong> +91 7358484266
+              </p>
+              <p style="color: #64748b; margin-bottom: 15px;">
+                <strong>Specialties:</strong> Clay Modeling, Neon Art
+              </p>
+              
+              <!-- Contact Buttons -->
+              <div class="contact-buttons">
+                <a href="tel:+917358484266" class="btn-call">
+                  📞 Call Now
+                </a>
+                <button onclick="openWhatsApp('917358484266', 'Hi, I am interested in ArtGram activities in Vijayawada!')" class="btn-whatsapp">
+                  💬 WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Studios Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title mb-5">Our Studios</h2>
+      <div class="row">
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="studio-card">
+            <div class="studio-icon">🌈</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 10px;">Slime Lab</h5>
+            <p style="color: #64748b; font-size: 0.9rem;">Dedicated space for slime experiments with safety equipment and colorful materials.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="studio-card">
+            <div class="studio-icon">🎨</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 10px;">Art Studio</h5>
+            <p style="color: #64748b; font-size: 0.9rem;">Professional easels, canvases, and premium art supplies for painting and drawing.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="studio-card">
+            <div class="studio-icon">🧶</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 10px;">Tufting Workshop</h5>
+            <p style="color: #64748b; font-size: 0.9rem;">Modern tufting guns and frames for creating beautiful rugs and wall hangings.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="studio-card">
+            <div class="studio-icon">🏺</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 10px;">Clay Corner</h5>
+            <p style="color: #64748b; font-size: 0.9rem;">Pottery wheels, kilns, and premium clay for sculpting and ceramic projects.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="studio-card">
+            <div class="studio-icon">💡</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 10px;">Neon Studio</h5>
+            <p style="color: #64748b; font-size: 0.9rem;">LED strips, acrylic boards, and design tools for creating stunning neon artwork.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="studio-card">
+            <div class="studio-icon">💻</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 10px;">Digital Lab</h5>
+            <p style="color: #64748b; font-size: 0.9rem;">Latest tablets, styluses, and software for digital art and animation projects.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="studio-card">
+            <div class="studio-icon">📚</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 10px;">Learning Lounge</h5>
+            <p style="color: #64748b; font-size: 0.9rem;">Comfortable seating area with art books, inspiration boards, and planning space.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="studio-card">
+            <div class="studio-icon">🎪</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 10px;">Event Space</h5>
+            <p style="color: #64748b; font-size: 0.9rem;">Flexible area for birthday parties, group workshops, and special celebrations.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Embed Section -->
+  <section class="bg-light py-4">
+    <div class="container text-center">
+      <h4 class="mb-3">Visit Our Hyderabad Studio</h4>
+      <div class="ratio ratio-16x9 shadow rounded">
+        <iframe src="https://maps.google.com/maps?q=hyderabad,india&z=14&output=embed" 
+                allowfullscreen 
+                loading="lazy" 
+                title="Hyderabad Location"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="border: 0;">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ArtGram. Crafted with ❤️ for creators.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Function to open Gmail specifically
+    function openGmail(email) {
+      // Detect if user is on mobile device
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // On mobile, try to open Gmail app first
+        const gmailAppUrl = `googlegmail://co?to=${email}`;
+        const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+        
+        // Try to open Gmail app
+        const tempLink = document.createElement('a');
+        tempLink.href = gmailAppUrl;
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        document.body.removeChild(tempLink);
+        
+        // Fallback to Gmail web after a short delay if app doesn't open
+        setTimeout(() => {
+          window.open(gmailWebUrl, '_blank');
+        }, 1500);
+        
+      } else {
+        // On desktop, open Gmail web directly
+        const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+        window.open(gmailWebUrl, '_blank');
+      }
+    }
+
+    // Enhanced WhatsApp function that works on both web and mobile
+    function openWhatsApp(phoneNumber, message) {
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(message);
+      
+      // Create WhatsApp URLs
+      const whatsappWeb = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+      const whatsappMobile = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+      
+      // Detect if user is on mobile device
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // On mobile, try to open WhatsApp app first, fallback to web
+        const tempLink = document.createElement('a');
+        tempLink.href = whatsappMobile;
+        tempLink.target = '_blank';
+        tempLink.rel = 'noopener noreferrer';
+        
+        // Add to DOM temporarily and click
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        document.body.removeChild(tempLink);
+        
+        // Fallback to web version after a short delay if app doesn't open
+        setTimeout(() => {
+          const fallbackLink = document.createElement('a');
+          fallbackLink.href = whatsappWeb;
+          fallbackLink.target = '_blank';
+          fallbackLink.rel = 'noopener noreferrer';
+          document.body.appendChild(fallbackLink);
+          fallbackLink.click();
+          document.body.removeChild(fallbackLink);
+        }, 2000);
+        
+      } else {
+        // On desktop, open WhatsApp Web
+        const webLink = document.createElement('a');
+        webLink.href = whatsappWeb;
+        webLink.target = '_blank';
+        webLink.rel = 'noopener noreferrer';
+        document.body.appendChild(webLink);
+        webLink.click();
+        document.body.removeChild(webLink);
+      }
+    }
+
+    // Contact form handling
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      // Get form data
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      
+      // Simple validation
+      if (!name || !email || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      
+      // Show success message
+      alert('Thank you for contacting us, ' + name + '! We\'ll get back to you shortly.');
+      
+      // Reset form
+      this.reset();
+    });
+
+    // Image error handling
+    document.querySelectorAll('.branch-image').forEach(img => {
+      img.addEventListener('error', function() {
+        this.style.backgroundColor = '#f8f9fa';
+        this.style.display = 'flex';
+        this.style.alignItems = 'center';
+        this.style.justifyContent = 'center';
+        this.innerHTML = '<span style="color: #6c757d;">Image not available</span>';
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

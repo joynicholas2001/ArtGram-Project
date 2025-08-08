@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtGram - Creative Art Experiences</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+      /* Custom styles for carousel control buttons */
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 56px;
+        height: 56px;
+        background: #c2184b;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.95;
+        border: none;
+        z-index: 20;
+        pointer-events: auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, box-shadow 0.2s;
+      }
+      .carousel-control-prev {
+        left: 24px;
+      }
+      .carousel-control-next {
+        right: 24px;
+      }
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        background: #ad1457;
+        box-shadow: 0 4px 16px rgba(194, 24, 75, 0.25);
+        opacity: 1;
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background: none;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* Custom SVG arrow icons */
+      .carousel-control-prev-icon::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml;utf8,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><polyline points='16,6 8,12 16,18' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+      }
+      .carousel-control-next-icon::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml;utf8,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><polyline points='8,6 16,12 8,18' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+      }
+      /* Ensure controls are clickable */
+      .carousel-control-prev,
+      .carousel-control-next {
+        cursor: pointer;
+        pointer-events: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Universal Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="universalNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🎨 ArtGram</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html" data-page="home"
+                >Home</a
+              >
+            </li>
+
+            <!-- Universal Activities Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="activitiesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Activities
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+                <li>
+                  <a class="dropdown-item" href="slime-play.html">
+                    <div class="activity-icon">🌈</div>
+                    <div class="activity-details">
+                      <h6>Slime</h6>
+                      <p>Create colorful, stretchy slime</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="art-making-activity.html">
+                    <div class="activity-icon">🎨</div>
+                    <div class="activity-details">
+                      <h6>Art Making</h6>
+                      <p>Express creativity through painting</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="tufting-activity.html">
+                    <div class="activity-icon">🧶</div>
+                    <div class="activity-details">
+                      <h6>Tufting Experience</h6>
+                      <p>Create beautiful rugs & wall hangings</p>
+                    </div>
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="activities.html">
+                    <div
+                      class="activity-icon"
+                      style="background: var(--secondary); color: white"
+                    >
+                      📋
+                    </div>
+                    <div class="activity-details">
+                      <h6>View All Activities</h6>
+                      <p>See our complete range</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="events.html" data-page="events"
+                >Events</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html" data-page="shop">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ourstory.html" data-page="ourstory"
+                >Our Story</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html" data-page="contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <a href="book-session.html" class="btn btn-session"
+            >Book a Slime Session</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <!-- Hero Background Carousel -->
+      <div
+        id="heroCarousel"
+        class="carousel slide hero-carousel"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Art Making"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slime Play"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="2"
+            aria-label="Neon & Tufting"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <!-- Art Making Background -->
+          <div
+            class="carousel-item active"
+            style="
+              background-image: url('https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/v1754630801/HAR05956_c7944n.jpg');
+              min-height: 400px;
+              background-size: cover;
+              background-position: center;
+            "
+          ></div>
+
+          <!-- Slime Play Background -->
+          <div
+            class="carousel-item"
+            style="
+              background-image: url('https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/v1754631030/DSC07659_wdwjtp.jpg');
+              min-height: 400px;
+              background-size: cover;
+              background-position: center;
+            "
+          ></div>
+
+          <!-- Neon & Tufting Background -->
+          <div
+            class="carousel-item"
+            style="
+              background-image: url('https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/v1754632272/COUROSEL_IMAGE_hkof14.png');
+              min-height: 400px;
+              background-size: cover;
+              background-position: center;
+            "
+          ></div>
+        </div>
+        <!-- Move carousel controls OUTSIDE .carousel-inner, but INSIDE .carousel -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+          tabindex="0"
+          aria-label="Previous"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+          tabindex="0"
+          aria-label="Next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Hero Content (Fixed on top) -->
+      <div class="hero-content">
+        <h1>Creative Art Experiences</h1>
+        <p>
+          Unleash your creativity through our guided sessions and fun events!
+        </p>
+        <a
+          href="book-session.html"
+          class="btn hero-btn px-4 py-2 rounded-pill text-white"
+          style="background-color: #9e9e9e; border: none"
+          >Start Your Journey</a
+        >
+      </div>
+    </header>
+    <section class="section bg-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img
+              src="https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/v1754634052/WhatsApp_Image_2025-08-06_at_21.37.50_02cf774e_fcuw4t.jpg"
+              class="img-fluid rounded shadow"
+              alt="Our Story"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1><strong>ABOUT US</strong></h1>
+            <h2>From Inspiration to Impact</h2>
+            <p>
+              ArtGram began with a dream — to make art accessible, joyful, and
+              part of everyday life. What started as a small initiative has
+              grown into a vibrant community, nurturing creativity across all
+              ages.
+            </p>
+            <p>
+              We believe that art is not just a hobby but a way to communicate,
+              heal, and evolve. Through our programs and events, we've touched
+              hundreds of lives, empowering individuals to create fearlessly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section text-center">
+      <div class="container">
+        <h2>ArtGram Activities</h2>
+        <p class="lead mb-5">
+          From messy slime fun to professional art techniques - discover your
+          creative passion
+        </p>
+
+        <!-- Original 3-card layout restored -->
+        <div class="row mt-5">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/v1754633325/IMG-20250807-WA0004_bepmdp.jpg"
+                class="card-img-top"
+                alt="Art Making"
+              />
+              <div class="card-body">
+                <h5 class="card-title">🎨 Art Making</h5>
+                <p class="card-text">
+                  Enjoy hands-on activities with painting, sketching and more
+                  guided by professional artists.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/v1754633013/HAR05994_xifian.jpg"
+                class="card-img-top"
+                alt="Slime Play"
+              />
+              <div class="card-body">
+                <h5 class="card-title">🌈 Slime Play</h5>
+                <p class="card-text">
+                  Get messy and creative with colorful, stretchy slime! Perfect
+                  for kids and adults who love sensory fun.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/v1754633457/HAR05892_ondezh.jpg"
+                class="card-img-top"
+                alt="Neon Art"
+              />
+              <div class="card-body">
+                <h5 class="card-title">💡 Neon & Tufting</h5>
+                <p class="card-text">
+                  Create glowing neon art or custom tufted designs to illuminate
+                  and decorate your space.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <a href="activities.html" class="btn btn-session btn-lg"
+            >View All Activities</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img
+              src="https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/v1754634788/IMG_9423_az4tmx.jpg"
+              class="img-fluid rounded shadow"
+              alt="Our Story"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1><strong>BIRTHDAY ARTGRAM</strong></h1>
+            <p>
+              Artgrma is the ultimate destination for birthdays, get-togethers,
+              and corporate events. Whether you're planning a cozy gathering or
+              a grand celebration, we offer tailored packages to suit every
+              occasion. Enjoy a private room with captivating activities,
+              exquisite food with buffet set up and stunning decor. With capcity
+              to accomodate 60 people artgram perfectly suits your venue
+              destiantion.
+            </p>
+            <p>
+              Whatever your vision, Artgrma ensures a seamless, joyful
+              experience for you and your guests!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="section"
+      style="background: linear-gradient(135deg, #f1f5f9, #e2e8f0)"
+    >
+      <div class="container">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row">
+          <div class="col-lg-3 mb-4">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex mb-3">
+                  <span style="color: #facc15">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="card-text">
+                  “Had a wonderful time doing the slime activity! Everything was
+                  well-organized, and the staff were so kind, patient, and
+                  engaging. It was a lot of fun for both kids and adults, and we
+                  truly felt welcomed the whole time. We’ll definitely be back
+                  for more activities soon!”
+                </p>
+                <div class="d-flex align-items-center">
+                  <div
+                    class="rounded-circle bg-success d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px; font-size: 1.2rem"
+                  >
+                    👩
+                  </div>
+                  <div class="ms-3">
+                    <strong>Tejaswi Kalisetty</strong><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex mb-3">
+                  <span style="color: #facc15">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="card-text">
+                  “We hosted a onesie-themed baby shower at Artgram, and it was
+                  the best decision! Their team was attentive and turned a
+                  simple idea into a beautiful, memorable event. The venue was
+                  clean and comfortable, the food was delicious and timely, and
+                  everything went smoothly thanks to their care.”
+                </p>
+                <div class="d-flex align-items-center">
+                  <div
+                    class="rounded-circle bg-primary d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px; font-size: 1.2rem"
+                  >
+                    👨
+                  </div>
+                  <div class="ms-3">
+                    <strong>Mohana Swetha Nune</strong><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex mb-3">
+                  <span style="color: #facc15">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="card-text">
+                  “I celebrated my daughter's birthday party here and everyone
+                  had a fantastic time! Although the slime-making was a
+                  demonstration, the staff made sure the kids stayed involved
+                  and had fun. The venue was spacious, bright, and easy to
+                  reach, and the team was very responsive to all our queries.”
+                </p>
+                <div class="d-flex align-items-center">
+                  <div
+                    class="rounded-circle bg-warning d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px; font-size: 1.2rem"
+                  >
+                    👩
+                  </div>
+                  <div class="ms-3"><strong>Bhaswati Bhar</strong><br /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex mb-3">
+                  <span style="color: #facc15">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="card-text">
+                  “Attending an art workshop at Artgram was a delightful
+                  experience. The session was creative and well-paced, and the
+                  instructors were knowledgeable and supportive. The materials
+                  provided were of good quality, and the overall atmosphere made
+                  learning enjoyable and stress-free.”
+                </p>
+                <div class="d-flex align-items-center">
+                  <div
+                    class="rounded-circle bg-danger d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px; font-size: 1.2rem"
+                  >
+                    👨
+                  </div>
+                  <div class="ms-3"><strong>Amit Vyas</strong><br /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section text-center bg-white">
+      <div class="container">
+        <h2>Artgram Events</h2>
+        <p class="lead mt-3 mb-5">
+          We host memorable events like birthdays, team outings, corporate
+          parties, and more with a creative, artistic twist.
+        </p>
+
+        <!-- First row: 3 event cards -->
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="event-item">
+              <div class="event-icon">🎂</div>
+              <h5>Birthday Parties</h5>
+              <p>
+                Celebrate fun-filled birthday parties with artistic themes and
+                creative activities for all ages. Make unforgettable memories!
+              </p>
+              <img
+                src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                class="img-fluid rounded mt-3"
+                style="height: 150px; object-fit: cover"
+                alt="Birthday party"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="event-item">
+              <div class="event-icon">🎪</div>
+              <h5>Bridal Showers</h5>
+              <p>
+                Enjoy personalized bridal shower events filled with art,
+                creativity, and meaningful community connections.
+              </p>
+              <img
+                src="https://media-api.xogrp.com/images/01f74b34-6558-4b2a-a622-c08b694f2e07~rs_768.h"
+                class="img-fluid rounded mt-3"
+                style="height: 150px; object-fit: cover"
+                alt="Bridal shower"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="event-item">
+              <div class="event-icon">🏢</div>
+              <h5>Corporate Events</h5>
+              <p>
+                Host engaging corporate events and team-building workshops that
+                combine relaxation with creative expression.
+              </p>
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                class="img-fluid rounded mt-3"
+                style="height: 150px; object-fit: cover"
+                alt="Corporate event"
+              />
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Second row: 2 event cards centered -->
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="event-item">
+              <div class="event-icon">🤰</div>
+              <h5>Baby Showers</h5>
+              <p>
+                Celebrate new beginnings with beautiful and artsy baby shower
+                events designed for joy and connection.
+              </p>
+              <img
+                src="https://i.etsystatic.com/33588920/r/il/6745fa/4471442279/il_800x800.4471442279_4dla.jpg"
+                class="img-fluid rounded mt-3"
+                style="height: 150px; object-fit: cover"
+                alt="Baby shower"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="event-item">
+              <div class="event-icon">🎨</div>
+              <h5>Kitty Parties</h5>
+              <p>
+                Engage in creative art workshops that inspire learning,
+                collaboration, and artistic growth for all skill levels.
+              </p>
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                class="img-fluid rounded mt-3"
+                style="height: 150px; object-fit: cover"
+                alt="Art workshop"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIXED BRANCHES SECTION WITH IMPROVED HOVER EFFECTS -->
+    <section class="branches-section">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Branches</h2>
+        <p class="text-center lead mb-5">
+          Visit us at any of our creative hubs across South India
+        </p>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="branch-card">
+              <div class="position-relative">
+                <img
+                  src="https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/v1754637272/wp6539521_vvafqv.jpg"
+                  class="branch-image"
+                  alt="Charminar, Hyderabad"
+                />
+                <div class="branch-overlay">
+                  <h3 class="branch-title">🏛️ Hyderabad</h3>
+                </div>
+              </div>
+              <div class="branch-content">
+                <div class="branch-address">
+                  📍 2nd Floor, HITEC City Hub<br />
+                  Cyber Towers, Madhapur<br />
+                  Hyderabad - 500081, Telangana
+                </div>
+                <div class="contact-buttons">
+                  <a href="tel:+917358484266" class="btn-call">📞 Call Now</a>
+                  <a
+                    href="https://wa.me/7358484266?text=Hi, I'm interested in ArtGram activities in Hyderabad!"
+                    target="_blank"
+                    class="btn-whatsapp"
+                    >💬 WhatsApp</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="branch-card">
+              <div class="position-relative">
+                <img
+                  src="https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/v1754637135/durgamma_temple_vj_6472215382_l3h6wj.jpg"
+                  class="branch-image"
+                  alt="Charminar, Hyderabad"
+                />
+                <div class="branch-overlay">
+                  <h3 class="branch-title">🏛️ Vijayawada</h3>
+                </div>
+              </div>
+              <div class="branch-content">
+                <div class="branch-address">
+                  📍 2nd Floor, HITEC City Hub<br />
+                  Cyber Towers, Madhapur<br />
+                  Hyderabad - 500081, Telangana
+                </div>
+                <div class="contact-buttons">
+                  <a href="tel:+917358484266" class="btn-call">📞 Call Now</a>
+                  <a
+                    href="https://wa.me/7358484266?text=Hi, I'm interested in ArtGram activities in Hyderabad!"
+                    target="_blank"
+                    class="btn-whatsapp"
+                    >💬 WhatsApp</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="branch-card">
+              <div class="position-relative">
+                <img
+                  src="https://res.cloudinary.com/df2mieky2/image/upload/w_900,q_75,f_auto/w_800,h_500,c_fit/v1754637352/jayanth-muppaneni-y96JVdGu7XU-unsplash_1_kooajm.jpg"
+                  alt="Zoomed Out Image"
+                  style="
+                    width: 100%;
+                    object-fit: cover;
+                    transform: scale(0.9);
+                    transform-origin: center;
+                    transition: transform 0.3s ease;
+                  "
+                />
+                <div class="branch-overlay">
+                  <h3 class="branch-title">🏛️ Bangalore</h3>
+                </div>
+              </div>
+              <div class="branch-content">
+                <div class="branch-address">
+                  📍 2nd Floor, HITEC City Hub<br />
+                  Cyber Towers, Madhapur<br />
+                  Hyderabad - 500081, Telangana
+                </div>
+                <div class="contact-buttons">
+                  <a href="tel:+917358484266" class="btn-call">📞 Call Now</a>
+                  <a
+                    href="https://wa.me/7358484266?text=Hi, I'm interested in ArtGram activities in Hyderabad!"
+                    target="_blank"
+                    class="btn-whatsapp"
+                    >💬 WhatsApp</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="lead">
+            Can't decide which branch to visit?
+            <strong>Call our main helpline:</strong>
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap mt-3">
+            <a href="tel:+917358484266" class="btn btn-session btn-lg"
+              >📞 +91 7358484266</a
+            >
+            <a
+              href="https://wa.me/7358484266?text=Hi, I want to know more about ArtGram activities!"
+              target="_blank"
+              class="btn btn-session btn-lg"
+              style="background: #25d366"
+              >💬 Chat on WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h5 class="mb-3">🎨 ArtGram</h5>
+            <p>
+              Where creativity meets community. Join us for unforgettable art
+              experiences that inspire and delight.
+            </p>
+            <div class="mt-3">
+              <strong>📞 Main Helpline: +91 7358484266</strong><br />
+              <small>Available: Mon-Sat 10AM-8PM, Sun 11AM-6PM</small>
+            </div>
+          </div>
+          <div class="col-lg-6 text-lg-end">
+            <h6 class="mb-3">Quick Links</h6>
+            <div class="d-flex flex-wrap justify-content-lg-end gap-3 mb-3">
+              <a href="activities.html">Activities</a>
+              <a href="events.html">Events</a>
+              <a href="shop.html">Shop</a>
+              <a href="contactus.html">Contact</a>
+            </div>
+            <div class="mt-3">
+              <strong>Our Branches:</strong><br />
+              <small>🏛️ Hyderabad • 🌟 Bangalore • 🏞️ Vijayawada</small>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="text-center">
+          <p class="mb-0">&copy; 2025 ArtGram. Crafted with ❤️ for creators.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Universal Navbar JavaScript - Works on all pages
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set active page
+        setActivePage();
+
+        // Initialize dropdown after Bootstrap loads
+        setTimeout(function () {
+          initializeDropdown();
+        }, 100);
+
+        function setActivePage() {
+          // Get current page from URL
+          const currentPage =
+            window.location.pathname.split("/").pop().split(".")[0] || "index";
+
+          // Remove active class from all nav links
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            link.classList.remove("active");
+          });
+
+          // Add active class to current page
+          const currentLink =
+            document.querySelector(`[data-page="${currentPage}"]`) ||
+            document.querySelector(`[href*="${currentPage}"]`) ||
+            document.querySelector('[data-page="home"]'); // Default to home
+
+          if (currentLink) {
+            currentLink.classList.add("active");
+          }
+        }
+
+        function initializeDropdown() {
+          const dropdownToggle = document.getElementById("activitiesDropdown");
+          const dropdownMenu = dropdownToggle?.nextElementSibling;
+          const dropdownElement = dropdownToggle?.closest(".dropdown");
+
+          if (!dropdownToggle || !dropdownMenu || !dropdownElement) return;
+
+          let hoverTimeout;
+          let isHoveringDropdown = false;
+          let isHoveringToggle = false;
+
+          // Create Bootstrap dropdown instance
+          const dropdown = new bootstrap.Dropdown(dropdownToggle);
+
+          // Enhanced hover behavior for desktop
+          function showDropdown() {
+            if (window.innerWidth > 768) {
+              clearTimeout(hoverTimeout);
+              dropdown.show();
+            }
+          }
+
+          function hideDropdown() {
+            if (window.innerWidth > 768) {
+              hoverTimeout = setTimeout(() => {
+                if (!isHoveringDropdown && !isHoveringToggle) {
+                  dropdown.hide();
+                }
+              }, 300); // Longer delay to prevent accidental hiding
+            }
+          }
+
+          // Dropdown toggle hover events
+          dropdownToggle.addEventListener("mouseenter", () => {
+            isHoveringToggle = true;
+            showDropdown();
+          });
+
+          dropdownToggle.addEventListener("mouseleave", () => {
+            isHoveringToggle = false;
+            hideDropdown();
+          });
+
+          // Dropdown menu hover events (prevents hiding when moving to menu)
+          dropdownMenu.addEventListener("mouseenter", () => {
+            isHoveringDropdown = true;
+            clearTimeout(hoverTimeout);
+          });
+
+          dropdownMenu.addEventListener("mouseleave", () => {
+            isHoveringDropdown = false;
+            hideDropdown();
+          });
+
+          // Click behavior (works for both mobile and desktop)
+          dropdownToggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (dropdownMenu.classList.contains("show")) {
+              dropdown.hide();
+            } else {
+              dropdown.show();
+            }
+          });
+
+          // Close dropdown when clicking outside
+          document.addEventListener("click", function (e) {
+            if (!dropdownElement.contains(e.target)) {
+              dropdown.hide();
+              isHoveringDropdown = false;
+              isHoveringToggle = false;
+            }
+          });
+
+          // Handle window resize
+          window.addEventListener("resize", function () {
+            if (window.innerWidth <= 768) {
+              clearTimeout(hoverTimeout);
+              isHoveringDropdown = false;
+              isHoveringToggle = false;
+            }
+          });
+
+          // Prevent dropdown from closing when clicking inside it
+          dropdownMenu.addEventListener("click", function (e) {
+            e.stopPropagation();
+          });
+
+          // Additional safety: Handle focus events
+          dropdownToggle.addEventListener("focus", showDropdown);
+          dropdownToggle.addEventListener("blur", () => {
+            setTimeout(hideDropdown, 100);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

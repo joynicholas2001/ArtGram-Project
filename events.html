@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArtGram - Events</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="css/events.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg fixed-top" id="universalNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🎨 ArtGram</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" data-page="home">Home</a>
+          </li>
+          
+          <!-- Universal Activities Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+               href="#" 
+               id="activitiesDropdown" 
+               role="button" 
+               data-bs-toggle="dropdown" 
+               aria-expanded="false">
+              Activities
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+              <li>
+                <a class="dropdown-item" href="slime-play.html">
+                  <div class="activity-icon">🌈</div>
+                  <div class="activity-details">
+                    <h6>Slime</h6>
+                    <p>Create colorful, stretchy slime</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="art-making-activity.html">
+                  <div class="activity-icon">🎨</div>
+                  <div class="activity-details">
+                    <h6>Art Making</h6>
+                    <p>Express creativity through painting</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="tufting-activity.html">
+                  <div class="activity-icon">🧶</div>
+                  <div class="activity-details">
+                    <h6>Tufting Experience</h6>
+                    <p>Create beautiful rugs & wall hangings</p>
+                  </div>
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="activities.html">
+                  <div class="activity-icon" style="background: var(--secondary); color: white;">📋</div>
+                  <div class="activity-details">
+                    <h6>View All Activities</h6>
+                    <p>See our complete range</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="events.html" data-page="events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html" data-page="shop">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ourstory.html" data-page="ourstory">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html" data-page="contact">Contact</a>
+          </li>
+        </ul>
+        <a href="book-session.html" class="btn btn-session">Book a Slime Session</a>
+      </div>
+    </div>
+  </nav>
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-4">Special Events</h1>
+      <p class="lead mb-4">Celebrate life's special moments with creative experiences</p>
+      <p class="fs-5">Birthday parties, corporate events, and community workshops</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="event-card text-center">
+            <div class="event-icon">🎂</div>
+            <h4>Birthday Parties</h4>
+            <p>Make birthdays unforgettable with themed art parties, slime making, and creative activities for all ages.</p>
+            <div class="price-tag mb-3">Starting ₹2,999</div>
+            <button class="btn btn-book">Book Event</button>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="event-card text-center">
+            <div class="event-icon">🏢</div>
+            <h4>Corporate Events</h4>
+            <p>Team building activities with art workshops, collaborative projects, and stress-relief creative sessions.</p>
+            <div class="price-tag mb-3">Starting ₹4,999</div>
+            <button class="btn btn-book">Book Event</button>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="event-card text-center">
+            <div class="event-icon">🎨</div>
+            <h4>Art Workshops</h4>
+            <p>Community workshops featuring guest artists, new techniques, and collaborative art projects.</p>
+            <div class="price-tag mb-3">Starting ₹799</div>
+            <button class="btn btn-book">Book Event</button>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="event-card text-center">
+            <div class="event-icon">👫</div>
+            <h4>Kitty Parties</h4>
+            <p>Private group bookings for friends, families, or special occasions with customized activities.</p>
+            <div class="price-tag mb-3">Starting ₹1,999</div>
+            <button class="btn btn-book">Book Event</button>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="event-card text-center">
+            <div class="event-icon">🎪</div>
+            <h4>Baby Shower Parties</h4>
+            <p>Holiday-themed workshops, summer camps, and special celebration events throughout the year.</p>
+            <div class="price-tag mb-3">Starting ₹599</div>
+            <button class="btn btn-book">Book Event</button>
+          </div>
+        </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ArtGram. Crafted with ❤️ for creators.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

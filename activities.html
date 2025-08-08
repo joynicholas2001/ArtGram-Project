@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+   
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArtGram - Activities</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="css/activities.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="font-family: 'Segoe UI', sans-serif; background-color: #f1f5f9; color: #0f172a;">
+
+  <!-- ==================== NAVIGATION SECTION ==================== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="universalNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🎨 ArtGram</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" data-page="home">Home</a>
+          </li>
+          
+          <!-- Universal Activities Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+               href="#" 
+               id="activitiesDropdown" 
+               role="button" 
+               data-bs-toggle="dropdown" 
+               aria-expanded="false">
+              Activities
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+              <li>
+                <a class="dropdown-item" href="slime-play.html">
+                  <div class="activity-icon">🌈</div>
+                  <div class="activity-details">
+                    <h6>Slime</h6>
+                    <p>Create colorful, stretchy slime</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="art-making-activity.html">
+                  <div class="activity-icon">🎨</div>
+                  <div class="activity-details">
+                    <h6>Art Making</h6>
+                    <p>Express creativity through painting</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="tufting-activity.html">
+                  <div class="activity-icon">🧶</div>
+                  <div class="activity-details">
+                    <h6>Tufting Experience</h6>
+                    <p>Create beautiful rugs & wall hangings</p>
+                  </div>
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="activities.html">
+                  <div class="activity-icon" style="background: var(--secondary); color: white;">📋</div>
+                  <div class="activity-details">
+                    <h6>View All Activities</h6>
+                    <p>See our complete range</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="events.html" data-page="events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html" data-page="shop">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ourstory.html" data-page="ourstory">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html" data-page="contact">Contact</a>
+          </li>
+        </ul>
+        <a href="book-session.html" class="btn btn-session">Book a Slime Session</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section style="background: linear-gradient(135deg, #e11d48, #be123c); color: white; padding: 100px 0; text-align: center;">
+    <div class="container">
+      <h1 style="font-size: 3.5rem; font-weight: bold; margin-bottom: 1.5rem;">Creative Activities</h1>
+      <p style="font-size: 1.25rem; margin-bottom: 1.5rem;">Discover hands-on experiences that spark imagination and creativity</p>
+      <p style="font-size: 1.125rem;">From slime making to neon art - we have something special for every creative soul</p>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED ACTIVITIES SECTION ==================== -->
+  <section style="background: white; padding: 80px 0;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 3rem; color: #0f172a; font-weight: 700;">Our Featured Activities</h2>
+      <div class="row">
+        
+        <!-- Slime Activity Card -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: white; border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden; height: 100%;"
+              onclick="location.href='slime-play.html'"
+              onmouseover="this.style.transform='translateY(-15px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(225, 29, 72, 0.3)'"
+              onmouseout="this.style.transform='translateY(0px) scale(1)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)'">
+            
+            <div style="width: 100px; height: 100px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 2.5rem; transition: all 0.4s ease;">🌈</div>
+            <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 20px; font-size: 1.5rem;">Slime Play</h4>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 25px;">Create colorful, stretchy, and sparkly slime in various textures.</p>
+            <div style="background: #e11d48; color: white; padding: 12px 24px; border-radius: 25px; font-weight: 600; font-size: 1rem; display: inline-block; transition: all 0.3s ease; border: none; text-decoration: none;">Book Now</div>
+          </div>
+        </div>
+
+
+        <!-- Art Making Activity Card -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: white; border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden; height: 100%;"
+               onclick="location.href='art-making-activity.html'"
+               onmouseover="this.style.transform='translateY(-15px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(225, 29, 72, 0.3)'"
+               onmouseout="this.style.transform='translateY(0px) scale(1)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)'">
+            
+            <div style="width: 100px; height: 100px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 2.5rem; transition: all 0.4s ease;">🎨</div>
+            <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 20px; font-size: 1.5rem;">Art Making</h4>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 25px;">Express creativity through painting, drawing, and mixed media art.</p>
+            <div style="color: #e11d48; font-weight: 600; font-size: 1.1rem;">Learn More →</div>
+          </div>
+        </div>
+
+        <!-- Tufting Activity Card -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: white; border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden; height: 100%;"
+               onclick="location.href='tufting-activity.html'"
+               onmouseover="this.style.transform='translateY(-15px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(225, 29, 72, 0.3)'"
+               onmouseout="this.style.transform='translateY(0px) scale(1)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)'">
+            
+            <div style="width: 100px; height: 100px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 2.5rem; transition: all 0.4s ease;">🧶</div>
+            <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 20px; font-size: 1.5rem;">Tufting Experience</h4>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 25px;">Create beautiful rugs and wall hangings using tufting guns.</p>
+            <div style="color: #e11d48; font-weight: 600; font-size: 1.1rem;">Learn More →</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ALL ACTIVITIES SECTION ==================== -->
+  <section style="padding: 80px 0; background-color: #f1f5f9;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 3rem; color: #0f172a; font-weight: 700;">All Our Activities</h2>
+      <div class="row">
+        
+        <div class="col-lg-6 col-md-6 mb-4">
+          <div style="background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%;"
+               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'"
+               onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.08)'">
+            <div style="width: 80px; height: 80px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem;">🌈</div>
+            <span style="background: #e11d48; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; display: inline-block; margin-bottom: 15px;">Ages 4-12</span>
+            <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 15px;">Slime Play</h4>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Create colorful, stretchy, and sparkly slime in various textures. Kids learn about polymers while having endless fun mixing and creating their perfect slime recipe.</p>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #e11d48; margin-bottom: 15px;">₹299</div>
+            <button style="background: #0f172a; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 600; width: 100%; transition: background 0.3s ease;"
+                    onmouseover="this.style.background='#1e293b'"
+                    onmouseout="this.style.background='#0f172a'">Book Now</button>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 mb-4">
+          <div style="background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%;"
+               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'"
+               onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.08)'">
+            <div style="width: 80px; height: 80px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem;">🎨</div>
+            <span style="background: #e11d48; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; display: inline-block; margin-bottom: 15px;">Ages 3-15</span>
+            <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 15px;">Art Making</h4>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Express creativity through painting, drawing, and mixed media art. Professional guidance helps children explore different techniques and discover their artistic style.</p>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #e11d48; margin-bottom: 15px;">₹399</div>
+            <button style="background: #0f172a; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 600; width: 100%; transition: background 0.3s ease;"
+                    onmouseover="this.style.background='#1e293b'"
+                    onmouseout="this.style.background='#0f172a'">Book Now</button>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 mb-4">
+          <div style="background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%;"
+               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'"
+               onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.08)'">
+            <div style="width: 80px; height: 80px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem;">🧶</div>
+            <span style="background: #e11d48; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; display: inline-block; margin-bottom: 15px;">Ages 8+</span>
+            <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 15px;">Tufting Experience</h4>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Create beautiful rugs and wall hangings using tufting guns. Learn this trending craft technique and take home your unique textile masterpiece.</p>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #e11d48; margin-bottom: 15px;">₹799</div>
+            <button style="background: #0f172a; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 600; width: 100%; transition: background 0.3s ease;"
+                    onmouseover="this.style.background='#1e293b'"
+                    onmouseout="this.style.background='#0f172a'">Book Now</button>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 mb-4">
+          <div style="background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%;"
+               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'"
+               onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.08)'">
+            <div style="width: 80px; height: 80px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem;">💡</div>
+            <span style="background: #e11d48; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; display: inline-block; margin-bottom: 15px;">Ages 10+</span>
+            <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 15px;">Neon Art Creation</h4>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Design and create stunning neon-style artwork using LED strips and acrylic. Perfect for room decoration and learning about color theory and design.</p>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #e11d48; margin-bottom: 15px;">₹599</div>
+            <button style="background: #0f172a; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 600; width: 100%; transition: background 0.3s ease;"
+                    onmouseover="this.style.background='#1e293b'"
+                    onmouseout="this.style.background='#0f172a'">Book Now</button>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 mb-4">
+          <div style="background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%;"
+               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'"
+               onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.08)'">
+            <div style="width: 80px; height: 80px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem;">🏺</div>
+            <span style="background: #e11d48; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; display: inline-block; margin-bottom: 15px;">Ages 5-14</span>
+            <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 15px;">Clay Modeling Workshop</h4>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Shape imagination into reality with clay modeling. Create pottery, sculptures, and decorative items while developing fine motor skills and spatial awareness.</p>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #e11d48; margin-bottom: 15px;">₹449</div>
+            <button style="background: #0f172a; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 600; width: 100%; transition: background 0.3s ease;"
+                    onmouseover="this.style.background='#1e293b'"
+                    onmouseout="this.style.background='#0f172a'">Book Now</button>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 mb-4">
+          <div style="background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%;"
+               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'"
+               onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.08)'">
+            <div style="width: 80px; height: 80px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem;">💻</div>
+            <span style="background: #e11d48; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; display: inline-block; margin-bottom: 15px;">Ages 8+</span>
+            <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 15px;">Digital Art & Design</h4>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Explore digital creativity using tablets and design software. Learn illustration, animation basics, and create digital masterpieces in a tech-savvy environment.</p>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #e11d48; margin-bottom: 15px;">₹549</div>
+            <button style="background: #0f172a; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 600; width: 100%; transition: background 0.3s ease;"
+                    onmouseover="this.style.background='#1e293b'"
+                    onmouseout="this.style.background='#0f172a'">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY CHOOSE US SECTION ==================== -->
+  <section style="background: white; padding: 80px 0;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 3rem; color: #0f172a; font-weight: 700;">Why Choose Our Activities?</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div style="text-align: center; padding: 30px 20px;">
+            <div style="width: 60px; height: 60px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.5rem;">👨‍🏫</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 15px;">Expert Instructors</h5>
+            <p style="color: #64748b; line-height: 1.6;">Professional artists and educators guide every session with patience and expertise.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="text-align: center; padding: 30px 20px;">
+            <div style="width: 60px; height: 60px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.5rem;">🎯</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 15px;">Age-Appropriate</h5>
+            <p style="color: #64748b; line-height: 1.6;">Activities designed specifically for different age groups to ensure optimal learning experience.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="text-align: center; padding: 30px 20px;">
+            <div style="width: 60px; height: 60px; background: #facc15; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.5rem;">🏆</div>
+            <h5 style="color: #0f172a; font-weight: 600; margin-bottom: 15px;">Take Home Creations</h5>
+            <p style="color: #64748b; line-height: 1.6;">Every participant leaves with their unique creation and newfound skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS SECTION ==================== -->
+  <section style="background: #f1f5f9; padding: 80px 0;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 3rem; color: #0f172a; font-weight: 700;">What Parents Say</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+            <div style="color: #facc15; font-size: 1.2rem; margin-bottom: 15px;">★★★★★</div>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 15px;">"My daughter absolutely loves the slime workshop! She's learned so much about science while having fun."</p>
+            <strong style="color: #0f172a;">- Priya M.</strong>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+            <div style="color: #facc15; font-size: 1.2rem; margin-bottom: 15px;">★★★★★</div>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 15px;">"The tufting experience was amazing. My son created a beautiful rug for his room and gained confidence in crafting."</p>
+            <strong style="color: #0f172a;">- Rajesh K.</strong>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+            <div style="color: #facc15; font-size: 1.2rem; margin-bottom: 15px;">★★★★★</div>
+            <p style="color: #64748b; line-height: 1.6; margin-bottom: 15px;">"Professional instructors, great facilities, and my kids always come home excited about what they learned."</p>
+            <strong style="color: #0f172a;">- Anita S.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER SECTION ==================== -->
+  <footer style="background-color: #0f172a; color: white; padding: 40px 0; text-align: center;">
+    <div class="container">
+      <p>&copy; 2025 ArtGram. Crafted with ❤️ for creators.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

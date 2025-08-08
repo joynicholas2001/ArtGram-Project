@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate Slime Experience - ArtGram</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="css/slime-play.css">
+    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+</head>
+<body>
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="universalNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🎨 ArtGram</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" data-page="home">Home</a>
+          </li>
+          
+          <!-- Universal Activities Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+               href="#" 
+               id="activitiesDropdown" 
+               role="button" 
+               data-bs-toggle="dropdown" 
+               aria-expanded="false">
+              Activities
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+              <li>
+                <a class="dropdown-item" href="slime-play.html">
+                  <div class="activity-icon">🌈</div>
+                  <div class="activity-details">
+                    <h6>Slime</h6>
+                    <p>Create colorful, stretchy slime</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="art-making-activity.html">
+                  <div class="activity-icon">🎨</div>
+                  <div class="activity-details">
+                    <h6>Art Making</h6>
+                    <p>Express creativity through painting</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="tufting-activity.html">
+                  <div class="activity-icon">🧶</div>
+                  <div class="activity-details">
+                    <h6>Tufting Experience</h6>
+                    <p>Create beautiful rugs & wall hangings</p>
+                  </div>
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="activities.html">
+                  <div class="activity-icon" style="background: var(--secondary); color: white;">📋</div>
+                  <div class="activity-details">
+                    <h6>View All Activities</h6>
+                    <p>See our complete range</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="events.html" data-page="events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html" data-page="shop">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ourstory.html" data-page="ourstory">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html" data-page="contact">Contact</a>
+          </li>
+        </ul>
+        <a href="book-session.html" class="btn btn-session">Book a Slime Session</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>🌈 INDIA'S FIRST SLIME STUDIO 🌈</h1>
+      <p>We’re proud to host India’s first slime studio, where guests can indulge in the fun and therapeutic process of slime play.</p>
+      <a href="#slime-booking" class="cta-button">
+        🎯 BOOK YOUR SLIME ADVENTURE NOW!
+      </a>
+    </div>
+  </header>
+
+  <!-- What is Slime Section -->
+  <center>
+  <section class="section" id="what-is-slime" style="background: var(--light);">
+    <div class="container">
+      <h2>🤔 What is Slime?</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="content-card">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 style="color: var(--slime-green); margin-bottom: 20px;">The Magic of Slime Making!</h3>
+                <p style="font-size: 1.2rem; line-height: 1.8;">
+                  For kids, our Slime Play area is a dream come true as They explore vibrant colors and squishy textures. 
+As an extra treat, they can even personalize their own slime by choosing their favorite color and scent to take home.</p>
+                
+                <div class="slime-feature">
+                  <h5 style="color: var(--slime-purple);">🧪 Science + Art Combined</h5>
+                  <p>Learn chemistry while creating masterpieces! Mix, stretch, and discover the fascinating properties of polymers.</p>
+                </div>
+
+                <div class="slime-feature">
+                  <h5 style="color: var(--slime-pink);">🎨 Unlimited Creativity</h5>
+                  <p>Choose from 20+ slime types: Fluffy Cloud Slime, Galaxy Glitter Slime, Butter Slime, Clear Slime, and more!</p>
+                </div>
+
+                <div class="slime-feature">
+                  <h5 style="color: var(--slime-blue);">😌 Stress Relief & Focus</h5>
+                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The tactile experience is incredibly therapeutic!</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div id="slimeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                  <div class="carousel-inner" style="border-radius: 15px; overflow: hidden;">
+                    <div class="carousel-item active">
+                      <img src="https://images.unsplash.com/photo-1587673486475-d72388eb1c82?auto=format&fit=crop&w=600&q=80" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Colorful Slime Making">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://images.unsplash.com/photo-1609332819996-b1abed918122?auto=format&fit=crop&w=600&q=80" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Kids Playing with Slime">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://images.unsplash.com/photo-1595950652446-52eeaeaf26ff?auto=format&fit=crop&w=600&q=80" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Stretchy Slime Fun">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="slime-stats">
+              <div class="stat-item">
+                <span class="stat-number">50,000+</span>
+                <span class="stat-label">Happy Customers</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Slime Varieties</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Safe Materials</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">City Locations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </center>
+
+
+  <!-- Duration Section -->
+  <section class="section" style="background: linear-gradient(135deg, #f8fafc, #e2e8f0);">
+    <div class="container">
+      <h2>⏰ Session Duration & Timing</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="duration-card">
+            <h4>🚀 Quick Slime (30 mins)</h4>
+            <h3 style="margin: 20px 0;">₹299</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li>✅ Choose 1 Slime Type</li>
+              <li>✅ All Materials Included</li>
+              <li>✅ Take Home Your Creation</li>
+              <li>✅ Perfect for Beginners</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="duration-card" style="background: linear-gradient(45deg, var(--slime-green), var(--slime-blue)); transform: scale(1.05);">
+            <div style="background: var(--highlight); color: var(--primary); padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; font-weight: 700;">MOST POPULAR</div>
+            <h4>🌟 Ultimate Slime (60 mins)</h4>
+            <h3 style="margin: 20px 0;">₹499</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li>✅ Choose 2 Slime Types</li>
+              <li>✅ Premium Add-ins Available</li>
+              <li>✅ Mini Slime Science Lesson</li>
+              <li>✅ Perfect for All Ages</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="duration-card" style="background: linear-gradient(45deg, var(--slime-purple), var(--slime-pink));">
+            <h4>💎 Premium Slime (90 mins)</h4>
+            <h3 style="margin: 20px 0;">₹799</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li>✅ Choose 3 Slime Types</li>
+              <li>✅ Exclusive Premium Materials</li>
+              <li>✅ Personal Slime Containers</li>
+              <li>✅ Advanced Techniques</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activity Description Section -->
+  <section class="section" style="background: var(--light);">
+    <div class="container">
+      <h2>🎨 Slime Activity Menu</h2>
+      <div class="activity-grid">
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1587673486475-d72388eb1c82?auto=format&fit=crop&w=400&q=80" alt="Fluffy Cloud Slime" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹349</div>
+            <div class="activity-title">☁️ Fluffy Cloud Slime</div>
+            <p>Super soft and airy! Mix shaving cream with our secret ingredients for the fluffiest slime experience.</p>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1609332819996-b1abed918122?auto=format&fit=crop&w=400&q=80" alt="Galaxy Glitter Slime" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹399</div>
+            <div class="activity-title">🌌 Galaxy Glitter Slime</div>
+            <p>Sparkly and cosmic! Add holographic glitters and cosmic colors to create your own galaxy in a container.</p>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1595950652446-52eeaeaf26ff?auto=format&fit=crop&w=400&q=80" alt="Butter Slime" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹329</div>
+            <div class="activity-title">🧈 Butter Slime</div>
+            <p>Smooth and spreadable like butter! The most satisfying texture that you can stretch and mold effortlessly.</p>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1577960444366-97f0b4068919?auto=format&fit=crop&w=400&q=80" alt="Clear Crystal Slime" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹379</div>
+            <div class="activity-title">💎 Clear Crystal Slime</div>
+            <p>Transparent and mesmerizing! Watch it jiggle and stretch with crystal-clear perfection.</p>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1587673486475-d72388eb1c82?auto=format&fit=crop&w=400&q=80" alt="Foam Bead Slime" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹359</div>
+            <div class="activity-title">🎪 Foam Bead Slime</div>
+            <p>Crunchy and satisfying! Mix colorful foam beads for the ultimate sensory experience with every squish.</p>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1609332819996-b1abed918122?auto=format&fit=crop&w=400&q=80" alt="Magnetic Slime" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹449</div>
+            <div class="activity-title">🧲 Magnetic Slime</div>
+            <p>Science meets fun! Watch your slime move and dance with magnetic forces - pure magic in action!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section - BookMyShow Style -->
+<section id="slime-booking" class="section" style="background: linear-gradient(135deg, var(--slime-green), var(--slime-blue));">
+  <div class="container">
+    <div class="booking-section">
+      <h2 style="color: rgb(21, 161, 6); text-align: center; margin-bottom: 40px;">🎯 BOOK YOUR SLIME EXPERIENCE NOW!</h2>
+      
+      <!-- Step 1: Date Selection (Inline) -->
+      <div class="booking-step mb-4">
+        <div class="step-header d-flex justify-content-between align-items-center mb-3">
+          <h4 style="color: var(--slime-green); margin: 0;">📅 Select Date</h4>
+          <div class="navigation-buttons">
+            <button type="button" class="nav-btn back-btn" id="dateBackBtn" style="display: none;" onclick="goToPreviousStep('date')">
+              ← Back
+            </button>
+            <button type="button" class="nav-btn forward-btn" id="dateForwardBtn" style="display: none;" onclick="goToNextStep('date')">
+              Next →
+            </button>
+          </div>
+        </div>
+        <div class="date-selector d-flex flex-wrap gap-2" id="dateSelector">
+          <!-- Dates will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Step 2: Location Selection -->
+      <div class="booking-step mb-4" id="locationStep" style="display: none;">
+        <div class="step-header d-flex justify-content-between align-items-center mb-3">
+          <h4 style="color: var(--slime-green); margin: 0;">📍 Select Location</h4>
+          <div class="navigation-buttons">
+            <button type="button" class="nav-btn back-btn" id="locationBackBtn" onclick="goToPreviousStep('location')">
+              ← Back
+            </button>
+            <button type="button" class="nav-btn forward-btn" id="locationForwardBtn" style="display: none;" onclick="goToNextStep('location')">
+              Next →
+            </button>
+          </div>
+        </div>
+        <div class="location-buttons d-flex flex-wrap gap-3">
+          <button type="button" class="location-btn" data-location="hyderabad">
+            <div class="location-name">🏛️ Hyderabad</div>
+            <div class="location-detail">HITEC City Hub</div>
+          </button>
+          <button type="button" class="location-btn" data-location="bangalore">
+            <div class="location-name">🌟 Bangalore</div>
+            <div class="location-detail">Brigade Gateway</div>
+          </button>
+          <button type="button" class="location-btn" data-location="vijayawada">
+            <div class="location-name">🏞️ Vijayawada</div>
+            <div class="location-detail">PVP Square Mall</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Session Selection -->
+      <div class="booking-step mb-4" id="sessionStep" style="display: none;">
+        <div class="step-header d-flex justify-content-between align-items-center mb-3">
+          <h4 style="color: var(--slime-green); margin: 0;">🎭 Select Session Type</h4>
+          <div class="navigation-buttons">
+            <button type="button" class="nav-btn back-btn" id="sessionBackBtn" onclick="goToPreviousStep('session')">
+              ← Back
+            </button>
+            <button type="button" class="nav-btn forward-btn" id="sessionForwardBtn" style="display: none;" onclick="goToNextStep('session')">
+              Next →
+            </button>
+          </div>
+        </div>
+        <div class="session-boxes d-flex flex-wrap gap-3">
+          <div class="session-box" data-session="quick" data-price="299">
+            <div class="session-icon">🚀</div>
+            <div class="session-name">Quick Slime</div>
+            <div class="session-duration">30 minutes</div>
+            <div class="session-price">₹299</div>
+          </div>
+          <div class="session-box" data-session="ultimate" data-price="499">
+            <div class="session-icon">🌟</div>
+            <div class="session-name">Ultimate Slime</div>
+            <div class="session-duration">60 minutes</div>
+            <div class="session-price">₹499</div>
+          </div>
+          <div class="session-box" data-session="premium" data-price="799">
+            <div class="session-icon">💎</div>
+            <div class="session-name">Premium Slime</div>
+            <div class="session-duration">90 minutes</div>
+            <div class="session-price">₹799</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Time Slot Selection -->
+      <div class="booking-step mb-4" id="timeStep" style="display: none;">
+        <div class="step-header d-flex justify-content-between align-items-center mb-3">
+          <h4 style="color: var(--slime-green); margin: 0;">⏰ Select Time Slot</h4>
+          <div class="navigation-buttons">
+            <button type="button" class="nav-btn back-btn" id="timeBackBtn" onclick="goToPreviousStep('time')">
+              ← Back
+            </button>
+            <button type="button" class="nav-btn forward-btn" id="timeForwardBtn" style="display: none;" onclick="goToNextStep('time')">
+              Next →
+            </button>
+          </div>
+        </div>
+        <div class="time-slots d-flex flex-wrap gap-2" id="timeSlots">
+          <div class="time-slot available" data-time="10:00">
+            <div class="time">10:00 AM</div>
+            <div class="availability">Available</div>
+          </div>
+          <div class="time-slot available" data-time="12:00">
+            <div class="time">12:00 PM</div>
+            <div class="availability">Available</div>
+          </div>
+          <div class="time-slot available" data-time="14:00">
+            <div class="time">2:00 PM</div>
+            <div class="availability">Available</div>
+          </div>
+          <div class="time-slot available" data-time="16:00">
+            <div class="time">4:00 PM</div>
+            <div class="availability">Available</div>
+          </div>
+          <div class="time-slot filling-fast" data-time="18:00">
+            <div class="time">6:00 PM</div>
+            <div class="availability">Filling Fast</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5: Personal Details -->
+      <div class="booking-step mb-4" id="detailsStep" style="display: none;">
+        <div class="step-header d-flex justify-content-between align-items-center mb-3">
+          <h4 style="color: var(--slime-green); margin: 0;">👤 Your Details</h4>
+          <div class="navigation-buttons">
+            <button type="button" class="nav-btn back-btn" id="detailsBackBtn" onclick="goToPreviousStep('details')">
+              ← Back
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="customerName" class="form-label">Full Name *</label>
+            <input type="text" class="form-control" id="customerName" placeholder="Enter your full name" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="customerPhone" class="form-label">Phone Number *</label>
+            <input type="tel" class="form-control" id="customerPhone" placeholder="+91 12345 67890" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="customerEmail" class="form-label">Email Address *</label>
+            <input type="email" class="form-control" id="customerEmail" placeholder="your@email.com" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="quantity" class="form-label">Number of Participants *</label>
+            <select class="form-control" id="quantity" required>
+              <option value="">Select quantity</option>
+              <option value="1">1 Person</option>
+              <option value="2">2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+              <option value="5">5 People</option>
+              <option value="6">6+ People (Group Booking)</option>
+            </select>
+          </div>
+          <div class="col-12 mb-3">
+            <label for="specialRequests" class="form-label">Special Requests (Optional)</label>
+            <textarea class="form-control" id="specialRequests" rows="3" placeholder="Any special requirements, allergies, or birthday celebrations?"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Summary & Proceed -->
+      <div class="booking-summary" id="bookingSummary" style="display: none;">
+        <div class="summary-card">
+          <h5 style="color: var(--slime-green); margin-bottom: 15px;">📋 Booking Summary</h5>
+          <div id="summaryDetails"></div>
+          <div class="total-amount" id="totalAmount"></div>
+          <button type="button" class="btn-book mt-3" id="proceedBooking">
+            🎯 PROCEED TO BOOK
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Navigation Button Styles */
+.step-header {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: white;
+  border: 2px solid var(--slime-green);
+  color: var(--slime-green);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.nav-btn:hover {
+  background: var(--slime-green);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.back-btn:hover {
+  background: #6c757d;
+  color: white;
+}
+
+.forward-btn {
+  background: var(--slime-green);
+  color: white;
+}
+
+.forward-btn:hover {
+  background: var(--slime-blue);
+  border-color: var(--slime-blue);
+}
+
+/* Responsive navigation buttons */
+@media (max-width: 768px) {
+  .step-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .navigation-buttons {
+    justify-content: center;
+  }
+  
+  .nav-btn {
+    min-width: 100px;
+  }
+}
+
+/* All previous styles remain the same */
+.booking-step {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.date-selector .date-item {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.date-selector .date-item:hover,
+.date-selector .date-item.selected {
+  border-color: var(--slime-green);
+  background: var(--slime-green);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.date-item .day {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.date-item .date {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.date-item .month {
+  font-size: 0.8rem;
+}
+
+.location-btn {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 200px;
+}
+
+.location-btn:hover,
+.location-btn.selected {
+  border-color: var(--slime-green);
+  background: var(--slime-green);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.location-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.location-detail {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.session-box {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  position: relative;
+}
+
+.session-box:hover,
+.session-box.selected {
+  border-color: var(--slime-green);
+  background: var(--slime-green);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.session-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.session-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.session-duration {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.session-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff6b35;
+}
+
+.session-box.selected .session-price {
+  color: white;
+}
+
+.time-slot {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.time-slot.available {
+  border-color: #28a745;
+}
+
+.time-slot.filling-fast {
+  border-color: #ffc107;
+  background: #fff8e1;
+}
+
+.time-slot.sold-out {
+  border-color: #dc3545;
+  background: #f8f8f8;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.time-slot:hover:not(.sold-out),
+.time-slot.selected {
+  border-color: var(--slime-green);
+  background: var(--slime-green);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.time-slot .time {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.time-slot .availability {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.booking-summary {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--slime-green);
+}
+
+.total-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--slime-green);
+  text-align: center;
+  margin: 15px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.btn-book {
+  background: linear-gradient(135deg, var(--slime-green), var(--slime-blue));
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-book:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+</style>
+
+<script>
+// Enhanced BookMyShow Style Booking JavaScript with Navigation
+document.addEventListener('DOMContentLoaded', function() {
+  let bookingData = {};
+  let currentStep = 'date';
+  
+  // Step order for navigation
+  const stepOrder = ['date', 'location', 'session', 'time', 'details'];
+  
+  // Navigation functions
+  window.goToPreviousStep = function(currentStepName) {
+    const currentIndex = stepOrder.indexOf(currentStepName);
+    if (currentIndex > 0) {
+      const previousStep = stepOrder[currentIndex - 1];
+      showSpecificStep(previousStep);
+    }
+  };
+  
+  window.goToNextStep = function(currentStepName) {
+    const currentIndex = stepOrder.indexOf(currentStepName);
+    if (currentIndex < stepOrder.length - 1) {
+      const nextStep = stepOrder[currentIndex + 1];
+      showSpecificStep(nextStep);
+    }
+  };
+  
+  function showSpecificStep(stepName) {
+    // Hide all steps
+    document.querySelectorAll('.booking-step').forEach(step => {
+      step.style.display = 'none';
+    });
+    
+    // Show the specific step
+    const stepMapping = {
+      'date': 'booking-step',
+      'location': 'locationStep',
+      'session': 'sessionStep',
+      'time': 'timeStep',
+      'details': 'detailsStep'
+    };
+    
+    if (stepName === 'date') {
+      document.querySelector('.booking-step').style.display = 'block';
+    } else {
+      document.getElementById(stepMapping[stepName]).style.display = 'block';
+    }
+    
+    currentStep = stepName;
+    updateNavigationButtons();
+  }
+  
+  function updateNavigationButtons() {
+    // Update forward button visibility based on selections
+    const forwardBtns = {
+      'date': 'dateForwardBtn',
+      'location': 'locationForwardBtn',
+      'session': 'sessionForwardBtn',
+      'time': 'timeForwardBtn'
+    };
+    
+    // Show forward buttons when selection is made
+    if (bookingData.date && currentStep === 'date') {
+      document.getElementById('dateForwardBtn').style.display = 'inline-block';
+    }
+    if (bookingData.location && currentStep === 'location') {
+      document.getElementById('locationForwardBtn').style.display = 'inline-block';
+    }
+    if (bookingData.session && currentStep === 'session') {
+      document.getElementById('sessionForwardBtn').style.display = 'inline-block';
+    }
+    if (bookingData.time && currentStep === 'time') {
+      document.getElementById('timeForwardBtn').style.display = 'inline-block';
+    }
+  }
+  
+  // Generate dates for next 7 days
+  function generateDates() {
+    const dateSelector = document.getElementById('dateSelector');
+    const today = new Date();
+    
+    for (let i = 0; i < 7; i++) {
+      const date = new Date(today);
+      date.setDate(today.getDate() + i);
+      
+      const dateItem = document.createElement('div');
+      dateItem.className = 'date-item';
+      dateItem.dataset.date = date.toISOString().split('T')[0];
+      
+      const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+      const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+      
+      dateItem.innerHTML = `
+        <div class="day">${dayNames[date.getDay()]}</div>
+        <div class="date">${date.getDate()}</div>
+        <div class="month">${monthNames[date.getMonth()]}</div>
+      `;
+      
+      dateItem.addEventListener('click', function() {
+        selectDate(this);
+      });
+      
+      dateSelector.appendChild(dateItem);
+    }
+  }
+  
+  function selectDate(element) {
+    document.querySelectorAll('.date-item').forEach(item => item.classList.remove('selected'));
+    element.classList.add('selected');
+    bookingData.date = element.dataset.date;
+    updateNavigationButtons();
+  }
+  
+  function showStep(stepId) {
+    document.querySelectorAll('.booking-step').forEach(step => {
+      step.style.display = 'none';
+    });
+    document.getElementById(stepId).style.display = 'block';
+  }
+  
+  // Location selection
+  document.querySelectorAll('.location-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.location-btn').forEach(b => b.classList.remove('selected'));
+      this.classList.add('selected');
+      bookingData.location = this.dataset.location;
+      updateNavigationButtons();
+    });
+  });
+  
+  // Session selection
+  document.querySelectorAll('.session-box').forEach(box => {
+    box.addEventListener('click', function() {
+      document.querySelectorAll('.session-box').forEach(b => b.classList.remove('selected'));
+      this.classList.add('selected');
+      bookingData.session = this.dataset.session;
+      bookingData.price = parseInt(this.dataset.price);
+      updateNavigationButtons();
+    });
+  });
+  
+  // Time slot selection
+  document.querySelectorAll('.time-slot').forEach(slot => {
+    slot.addEventListener('click', function() {
+      if (!this.classList.contains('sold-out')) {
+        document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+        this.classList.add('selected');
+        bookingData.time = this.dataset.time;
+        updateNavigationButtons();
+      }
+    });
+  });
+  
+  // Quantity change to update summary
+  document.getElementById('quantity').addEventListener('change', function() {
+    if (this.value) {
+      bookingData.quantity = parseInt(this.value);
+      updateSummary();
+      document.getElementById('bookingSummary').style.display = 'block';
+    }
+  });
+  
+  function updateSummary() {
+    const summaryDetails = document.getElementById('summaryDetails');
+    const totalAmount = document.getElementById('totalAmount');
+    
+    const total = bookingData.price * bookingData.quantity;
+    
+    summaryDetails.innerHTML = `
+      <div><strong>Date:</strong> ${new Date(bookingData.date).toLocaleDateString()}</div>
+      <div><strong>Location:</strong> ${bookingData.location}</div>
+      <div><strong>Session:</strong> ${bookingData.session}</div>
+      <div><strong>Time:</strong> ${bookingData.time}</div>
+      <div><strong>Participants:</strong> ${bookingData.quantity}</div>
+    `;
+    
+    totalAmount.innerHTML = `Total Amount: ₹${total}`;
+  }
+  
+  // Proceed booking
+  document.getElementById('proceedBooking').addEventListener('click', function() {
+    const name = document.getElementById('customerName').value;
+    const phone = document.getElementById('customerPhone').value;
+    const email = document.getElementById('customerEmail').value;
+    
+    if (name && phone && email) {
+      alert('Booking confirmed! We will contact you within 2 hours.');
+      // Here you would normally send the data to your server
+    } else {
+      alert('Please fill in all required fields.');
+    }
+  });
+  
+  // Initialize
+  generateDates();
+  updateNavigationButtons();
+});
+</script>
+
+
+<script>
+// BookMyShow Style Booking JavaScript - 7 Days Rolling Window
+document.addEventListener('DOMContentLoaded', function() {
+  let bookingData = {};
+  
+  // Generate dates for next 7 days (rolling window)
+  function generateDates() {
+    const dateSelector = document.getElementById('dateSelector');
+    
+    // Clear existing dates
+    dateSelector.innerHTML = '';
+    
+    const today = new Date();
+    
+    // Generate exactly 7 days starting from today
+    for (let i = 0; i < 7; i++) {
+      const date = new Date(today);
+      date.setDate(today.getDate() + i);
+      
+      const dateItem = document.createElement('div');
+      dateItem.className = 'date-item';
+      dateItem.dataset.date = date.toISOString().split('T')[0];
+      
+      const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+      const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+      
+      // Add "Today" and "Tomorrow" labels for first two days
+      let dayLabel = dayNames[date.getDay()];
+      if (i === 0) {
+        dayLabel = 'TODAY';
+      } else if (i === 1) {
+        dayLabel = 'TOM';
+      }
+      
+      dateItem.innerHTML = `
+        <div class="day">${dayLabel}</div>
+        <div class="date">${date.getDate()}</div>
+        <div class="month">${monthNames[date.getMonth()]}</div>
+      `;
+      
+      dateItem.addEventListener('click', function() {
+        selectDate(this);
+      });
+      
+      dateSelector.appendChild(dateItem);
+    }
+  }
+  
+  // Auto-refresh dates at midnight to show new rolling 7-day window
+  function scheduleNextUpdate() {
+    const now = new Date();
+    const tomorrow = new Date(now);
+    tomorrow.setDate(now.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+    
+    const msUntilMidnight = tomorrow.getTime() - now.getTime();
+    
+    setTimeout(() => {
+      generateDates(); // Refresh the dates
+      scheduleNextUpdate(); // Schedule next update
+    }, msUntilMidnight);
+  }
+  
+  function selectDate(element) {
+    document.querySelectorAll('.date-item').forEach(item => item.classList.remove('selected'));
+    element.classList.add('selected');
+    bookingData.date = element.dataset.date;
+    showStep('locationStep');
+  }
+  
+  function showStep(stepId) {
+    document.querySelectorAll('.booking-step').forEach(step => {
+      step.style.display = 'none';
+    });
+    document.getElementById(stepId).style.display = 'block';
+  }
+  
+  // Location selection
+  document.querySelectorAll('.location-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.location-btn').forEach(b => b.classList.remove('selected'));
+      this.classList.add('selected');
+      bookingData.location = this.dataset.location;
+      showStep('sessionStep');
+    });
+  });
+  
+  // Session selection
+  document.querySelectorAll('.session-box').forEach(box => {
+    box.addEventListener('click', function() {
+      document.querySelectorAll('.session-box').forEach(b => b.classList.remove('selected'));
+      this.classList.add('selected');
+      bookingData.session = this.dataset.session;
+      bookingData.price = parseInt(this.dataset.price);
+      showStep('timeStep');
+    });
+  });
+  
+  // Time slot selection
+  document.querySelectorAll('.time-slot').forEach(slot => {
+    slot.addEventListener('click', function() {
+      if (!this.classList.contains('sold-out')) {
+        document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+        this.classList.add('selected');
+        bookingData.time = this.dataset.time;
+        showStep('detailsStep');
+      }
+    });
+  });
+  
+  // Quantity change to update summary
+  document.getElementById('quantity').addEventListener('change', function() {
+    if (this.value) {
+      bookingData.quantity = parseInt(this.value);
+      updateSummary();
+      document.getElementById('bookingSummary').style.display = 'block';
+    }
+  });
+  
+  function updateSummary() {
+    const summaryDetails = document.getElementById('summaryDetails');
+    const totalAmount = document.getElementById('totalAmount');
+    
+    const total = bookingData.price * bookingData.quantity;
+    
+    summaryDetails.innerHTML = `
+      <div><strong>Date:</strong> ${new Date(bookingData.date).toLocaleDateString()}</div>
+      <div><strong>Location:</strong> ${bookingData.location}</div>
+      <div><strong>Session:</strong> ${bookingData.session}</div>
+      <div><strong>Time:</strong> ${bookingData.time}</div>
+      <div><strong>Participants:</strong> ${bookingData.quantity}</div>
+    `;
+    
+    totalAmount.innerHTML = `Total Amount: ₹${total}`;
+  }
+  
+  // Proceed booking
+  document.getElementById('proceedBooking').addEventListener('click', function() {
+    const name = document.getElementById('customerName').value;
+    const phone = document.getElementById('customerPhone').value;
+    const email = document.getElementById('customerEmail').value;
+    
+    if (name && phone && email) {
+      alert('Booking confirmed! We will contact you within 2 hours.');
+      // Here you would normally send the data to your server
+    } else {
+      alert('Please fill in all required fields.');
+    }
+  });
+  
+  // Initialize
+  generateDates();
+  scheduleNextUpdate(); // Start the auto-update cycle
+});
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h5 class="mb-3">🎨 ArtGram - India's #1 Slime Destination</h5>
+          <p>Where creativity meets community. Join us for unforgettable slime experiences that inspire and delight!</p>
+          <div class="mt-3">
+            <strong>📞 Slime Hotline: +91 7358484266</strong><br>
+            <small>Available: Mon-Sat 10AM-8PM, Sun 11AM-6PM</small>
+          </div>
+        </div>
+        <div class="col-lg-6 text-lg-end">
+          <h6 class="mb-3">Quick Links</h6>
+          <div class="d-flex flex-wrap justify-content-lg-end gap-3 mb-3">
+            <a href="activities.html" class="text-white text-decoration-none">Activities</a>
+            <a href="events.html" class="text-white text-decoration-none">Events</a>
+            <a href="shop.html" class="text-white text-decoration-none">Shop</a>
+            <a href="#slime-booking" class="text-white text-decoration-none">Book Slime Session</a>
+          </div>
+          <div class="mt-3">
+            <strong>Our Slime Studios:</strong><br>
+            <small>🏛️ Hyderabad • 🌟 Bangalore • 🏞️ Vijayawada</small>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 ArtGram. India's Ultimate Slime Experience! Made with ❤️ and lots of slime.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Package details display
+    document.getElementById('slimePackage').addEventListener('change', function() {
+      const packageDetails = document.getElementById('packageDetails');
+      const selected = this.value;
+      
+      const details = {
+        'quick': '✨ Perfect for first-time slimers! Choose 1 amazing slime type.',
+        'ultimate': '🌟 MOST POPULAR! Create 2 different slimes + mini science lesson.',
+        'premium': '💎 VIP Experience! 3 slime types + exclusive premium materials.'
+      };
+      
+      packageDetails.textContent = details[selected] || '';
+    });
+
+    // Form submission
+    document.getElementById('slimeBookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('slimeName').value;
+      const phone = document.getElementById('slimePhone').value;
+      const date = document.getElementById('slimeDate').value;
+      const time = document.getElementById('slimeTime').value;
+      const package = document.getElementById('slimePackage').value;
+      const location = document.getElementById('slimeLocation').value;
+      
+      if (!name || !phone || !date || !time || !package || !location) {
+        alert('🌈 Please fill in all required fields to book your amazing slime adventure!');
+        return;
+      }
+      
+      // Success message
+      alert(`🎉 AMAZING! Your slime adventure is booked!\n\n👋 Hi ${name}!\n📅 Date: ${date}\n⏰ Time: ${time}\n📍 Location: ${location}\n\nWe'll call you within 2 hours to confirm! Get ready for the BEST slime experience ever! 🌈✨`);
+      
+      this.reset();
+      document.getElementById('packageDetails').textContent = '';
+    });
+
+    // Auto-scroll carousel
+    var slimeCarousel = new bootstrap.Carousel(document.getElementById('slimeCarousel'), {
+      interval: 3000,
+      wrap: true,
+      pause: 'hover'
+    });
+
+    // Function to scroll to slime booking section with proper offset
+    function scrollToSlimeBooking() {
+      const bookingSection = document.getElementById('slime-booking');
+      if (bookingSection) {
+        // Calculate the offset for fixed navbar (approximately 80px)
+        const navbarHeight = 80;
+        const elementPosition = bookingSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+        
+        // Scroll to the calculated position
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Focus on first input field after scroll completes
+        setTimeout(() => {
+          const nameInput = document.getElementById('slimeName');
+          if (nameInput) {
+            nameInput.focus();
+          }
+        }, 800);
+      }
+    }
+
+    // Enhanced scroll to booking buttons - handles all links to #slime-booking
+    document.querySelectorAll('a[href="#slime-booking"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        scrollToSlimeBooking();
+      });
+    });
+
+    // Check if page loaded with #slime-booking hash and scroll to it
+    window.addEventListener('load', function() {
+      if (window.location.hash === '#slime-booking') {
+        // Small delay to ensure page is fully loaded
+        setTimeout(() => {
+          scrollToSlimeBooking();
+        }, 300);
+      }
+    });
+
+    // Handle hash changes (when user clicks back/forward)
+    window.addEventListener('hashchange', function() {
+      if (window.location.hash === '#slime-booking') {
+        scrollToSlimeBooking();
+      }
+    });
+  </script>
+</body>
+</html>
