@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    max-width: 90%;
+}
+
+.slide-overlay h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-weight: 800;
+    animation: slideInFromTop 1s ease-out;
+}
+
+.slide-overlay p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    animation: slideInFromBottom 1s ease-out 0.3s both;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 3;
+}
+
+/* .nav-btn {
+    background: rgba(255,255,255,0.3);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.6);
+    transform: scale(1.1);
+}
+
+.nav-btn:focus {
+    outline: 2px solid rgba(255,255,255,0.8);
+    outline-offset: 2px;
+} */
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 3;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator:hover {
+    background: rgba(255,255,255,0.8);
+}
+
+.indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+.content-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.content-section h1 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 800;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+}
+
+.video-section {
+    text-align: center;
+    margin: 4rem 0;
+    padding: 2rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.video-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    font-weight: 700;
+}
+
+.video-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.video-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.video-thumbnail {
+    position: relative;
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+    border-radius: 15px;
+    padding: 3rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.play-button {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.video-thumbnail p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.cta-section {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 700;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.cta-button:focus {
+    outline: 2px solid rgba(255,255,255,0.5);
+    outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes slideInFromTop {
+    from {
+        transform: translate(-50%, -70%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translate(-50%, -30%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .content-section {
+        padding: 3rem 0;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-overlay h2 {
+        font-size: 2.5rem;
+    }
+   
+    .slide-overlay p {
+        font-size: 1.2rem;
+    }
+   
+    .content-section h1 {
+        font-size: 2rem;
+    }
+   
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+   
+    .nav-btn {
+        font-size: 1.5rem;
+        padding: 0.8rem 1.2rem;
+    }
+   
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .carousel-nav {
+        padding: 0 1rem;
+    }
+    
+    .content-section {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-overlay {
+        max-width: 95%;
+    }
+    
+    .slide-overlay h2 {
+        font-size: 2rem;
+    }
+   
+    .slide-overlay p {
+        font-size: 1rem;
+    }
+   
+    .feature-card {
+        padding: 1.5rem;
+    }
+   
+    .video-thumbnail {
+        padding: 2rem;
+    }
+   
+    .play-button {
+        font-size: 3rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+    
+    .carousel-indicators {
+        bottom: 1rem;
+    }
+    
+    .nav-btn {
+        font-size: 1.2rem;
+        padding: 0.6rem 1rem;
+    }
+}
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Making</title>
+    <link rel="stylesheet" href="css/art-making-activity.css">
+    <link rel="stylesheet" href="./css/nav.css" />
+</head>
+<body>
+    <!-- Universal Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="universalNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🎨 ArtGram</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html" data-page="home"
+                >Home</a
+              >
+            </li>
+
+            <!-- Universal Activities Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="activitiesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Activities
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+                <li>
+                  <a class="dropdown-item" href="slime-play.html">
+                    <div class="activity-icon">🌈</div>
+                    <div class="activity-details">
+                      <h6>Slime</h6>
+                      <p>Create colorful, stretchy slime</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="art-making.html">
+                    <div class="activity-icon">🎨</div>
+                    <div class="activity-details">
+                      <h6>Art Making</h6>
+                      <p>Express creativity through painting</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="tufting-activity.html">
+                    <div class="activity-icon">🧶</div>
+                    <div class="activity-details">
+                      <h6>Tufting Experience</h6>
+                      <p>Create beautiful rugs & wall hangings</p>
+                    </div>
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="activities.html">
+                    <div
+                      class="activity-icon"
+                      style="background: var(--secondary); color: white"
+                    >
+                      📋
+                    </div>
+                    <div class="activity-details">
+                      <h6>View All Activities</h6>
+                      <p>See our complete range</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="events.html" data-page="events"
+                >Events</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html" data-page="shop">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ourstory.html" data-page="ourstory"
+                >Our Story</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html" data-page="contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <a href="book-session.html" class="btn btn-session"
+            >Book a Slime Session</a
+          >
+        </div>
+      </div>
+    </nav>
+    <div class="hero-section">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="art-painting.jpg" alt="Painting Workshop">
+                    <div class="slide-overlay">
+                        <h2>Express Your Vision</h2>
+                        <p>Transform your imagination into stunning visual masterpieces</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="art-sculpture.jpg" alt="Sculpture Creation">
+                    <div class="slide-overlay">
+                        <h2>Sculpt Your Dreams</h2>
+                        <p>Shape clay and materials into three-dimensional art</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="art-digital.jpg" alt="Digital Art">
+                    <div class="slide-overlay">
+                        <h2>Digital Innovation</h2>
+                        <p>Blend traditional techniques with modern technology</p>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Carousel Navigation -->
+            <div class="carousel-nav">
+                <button class="nav-btn prev" onclick="changeSlide(-1)">❮</button>
+                <button class="nav-btn next" onclick="changeSlide(1)">❯</button>
+            </div>
+           
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="container">
+            <h1>Discover Your Artistic Journey</h1>
+           
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Create Original Masterpieces</h3>
+                    <p>Design your own compositions, choose from professional-grade materials, and bring your artistic vision to life through various mediums and techniques.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">🧘</div>
+                    <h3>Mindful Art Practice</h3>
+                    <p>Experience the meditative flow of creation. Perfect for stress relief, focus building, and mindful expression through colors, shapes, and textures.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="feature-icon">🖼️</div>
+                    <h3>Create Lasting Beauty</h3>
+                    <p>Create meaningful art! Every session produces beautiful paintings, sculptures, mixed media pieces, or decorative works you'll treasure forever.</p>
+                </div>
+            </div>
+
+            <!-- YouTube Video Section -->
+            <div class="video-section">
+                <h2>Watch Our Art Process</h2>
+                <div class="video-container">
+                    <a href="https://youtube.com/shorts/P8No32l-kxo?feature=shared" target="_blank" class="video-link">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <p>Click to watch on YouTube</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Start Your Artistic Adventure</h2>
+                <p>Join our community of artists and discover the joy of creative expression</p>
+                <button class="cta-button">Book Your Session</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+           
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+            if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
+            if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-rotate carousel
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
+</body>
+</html>
