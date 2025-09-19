@@ -1,0 +1,587 @@
+:root {
+      --primary: #0f172a;
+      --secondary: #e11d48;
+      --light: #f1f5f9;
+      --highlight: #facc15;
+      --art-blue: #4A90E2;
+      --art-red: #D0021B;
+      --art-yellow: #F5A623;
+      --art-green: #7ED321;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--primary);
+    }
+
+
+    .hero {
+      background: linear-gradient(135deg, var(--art-blue), var(--art-red), var(--art-yellow)), url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1920&q=80') center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      margin-top: 76px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(74, 144, 226, 0.8), rgba(208, 2, 27, 0.8));
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .cta-button {
+      background: linear-gradient(45deg, var(--highlight), #FFA500);
+      color: white;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(255, 165, 0, 0.3);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 10px 30px rgba(255, 165, 0, 0.3); }
+      50% { box-shadow: 0 15px 40px rgba(255, 165, 0, 0.5); }
+      100% { box-shadow: 0 10px 30px rgba(255, 165, 0, 0.3); }
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(45deg, #FFA500, var(--highlight));
+      transform: translateY(-3px);
+      color: white;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section h2 {
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .content-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--art-blue), var(--art-red), var(--art-yellow), var(--art-green));
+    }
+
+    .content-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    }
+
+    .art-feature {
+      background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(208, 2, 27, 0.1));
+      border-radius: 15px;
+      padding: 30px;
+      margin: 20px 0;
+      border-left: 5px solid var(--art-blue);
+      transition: all 0.3s ease;
+    }
+
+    .art-feature:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(74, 144, 226, 0.2);
+    }
+
+    .duration-card {
+      background: linear-gradient(45deg, var(--art-red), var(--art-yellow));
+      color: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .duration-card:hover {
+      transform: rotate(2deg);
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .activity-item {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .activity-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .activity-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .activity-item:hover .activity-image {
+      transform: scale(1.1);
+    }
+
+    .activity-content {
+      padding: 25px;
+    }
+
+    .activity-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    .price-tag {
+      background: linear-gradient(45deg, var(--highlight), #FFA500);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .booking-section {
+      background: linear-gradient(135deg, var(--light), white);
+      border-radius: 30px;
+      padding: 50px;
+      margin: 40px 0;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .booking-form {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control {
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px 15px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: var(--art-blue);
+      box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+    }
+
+    .btn-book {
+      background: linear-gradient(45deg, var(--art-blue), var(--art-green));
+      color: white;
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-book:hover {
+      background: linear-gradient(45deg, var(--art-green), var(--art-blue));
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
+    }
+
+    .art-stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--art-blue);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 1.1rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .art-stats {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .activity-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+
+/* Navigation Button Styles */
+.step-header {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: white;
+  border: 2px solid var(--art-blue);
+  color: var(--art-blue);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.nav-btn:hover {
+  background: var(--art-blue);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.back-btn:hover {
+  background: #6c757d;
+  color: white;
+}
+
+.forward-btn {
+  background: var(--art-blue);
+  color: white;
+}
+
+.forward-btn:hover {
+  background: var(--art-green);
+  border-color: var(--art-green);
+}
+
+/* Responsive navigation buttons */
+@media (max-width: 768px) {
+  .step-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .navigation-buttons {
+    justify-content: center;
+  }
+  
+  .nav-btn {
+    min-width: 100px;
+  }
+}
+
+/* All previous styles remain the same */
+.booking-step {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.date-selector .date-item {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.date-selector .date-item:hover,
+.date-selector .date-item.selected {
+  border-color: var(--art-blue);
+  background: var(--art-blue);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.date-item .day {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.date-item .date {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.date-item .month {
+  font-size: 0.8rem;
+}
+
+.location-btn {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 200px;
+}
+
+.location-btn:hover,
+.location-btn.selected {
+  border-color: var(--art-blue);
+  background: var(--art-blue);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.location-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.location-detail {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.session-box {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  position: relative;
+}
+
+.session-box:hover,
+.session-box.selected {
+  border-color: var(--art-blue);
+  background: var(--art-blue);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.session-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.session-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.session-duration {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.session-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff6b35;
+}
+
+.session-box.selected .session-price {
+  color: white;
+}
+
+.time-slot {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.time-slot.available {
+  border-color: #28a745;
+}
+
+.time-slot.filling-fast {
+  border-color: #ffc107;
+  background: #fff8e1;
+}
+
+.time-slot.sold-out {
+  border-color: #dc3545;
+  background: #f8f8f8;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.time-slot:hover:not(.sold-out),
+.time-slot.selected {
+  border-color: var(--art-blue);
+  background: var(--art-blue);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.time-slot .time {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.time-slot .availability {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.booking-summary {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--art-blue);
+}
+
+.total-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--art-blue);
+  text-align: center;
+  margin: 15px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.btn-book {
+  background: linear-gradient(135deg, var(--art-blue), var(--art-green));
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-book:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
