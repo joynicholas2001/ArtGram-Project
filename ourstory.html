@@ -1,6 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    
+    :root {
+      --primary: #0f172a;
+      --secondary: #e11d48;
+      --light: #f1f5f9;
+      --highlight: #facc15;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--primary);
+      padding-top: 76px; /* Fixed padding to prevent content jump */
+    }
+
+
+    .hero-section {
+      background: linear-gradient(135deg, var(--secondary), #be123c);
+      color: white;
+      padding: 100px 0;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    /* Timeline Styles */
+    .timeline-section {
+      background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .timeline-title {
+      color: var(--secondary);
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .timeline-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--highlight);
+      border-radius: 2px;
+    }
+
+    .timeline-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: linear-gradient(to bottom, var(--secondary), var(--highlight));
+      transform: translateX(-50%);
+      border-radius: 3px;
+      z-index: 1;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+    .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+    .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+    .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+    .timeline-item:nth-child(5) { animation-delay: 1.0s; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .timeline-item.left {
+      justify-content: flex-end;
+      text-align: right;
+    }
+
+    .timeline-item.right {
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      width: 45%;
+      transition: all 0.3s ease;
+      border: 3px solid transparent;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      border-color: var(--highlight);
+    }
+
+    .timeline-content::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border: 15px solid transparent;
+      transform: translateY(-50%);
+    }
+
+    .timeline-item.left .timeline-content::before {
+      right: -30px;
+      border-left-color: white;
+    }
+
+    .timeline-item.right .timeline-content::before {
+      left: -30px;
+      border-right-color: white;
+    }
+
+    .timeline-year {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--secondary);
+      color: white;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      z-index: 3;
+      box-shadow: 0 0 0 6px white, 0 0 20px rgba(225, 29, 72, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .timeline-year:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+      box-shadow: 0 0 0 8px white, 0 0 30px rgba(225, 29, 72, 0.5);
+    }
+
+    .milestone-title {
+      color: var(--secondary);
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .milestone-icon {
+      font-size: 1.5rem;
+      background: var(--highlight);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .milestone-description {
+      color: #64748b;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .stats-highlight {
+      background: var(--highlight);
+      color: var(--primary);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-left: 10px;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .timeline-line {
+        left: 30px;
+      }
+
+      .timeline-item {
+        justify-content: flex-start !important;
+        text-align: left !important;
+      }
+
+      .timeline-content {
+        width: calc(100% - 80px);
+        margin-left: 60px;
+      }
+
+      .timeline-content::before {
+        left: -30px !important;
+        right: auto !important;
+        border-right-color: white !important;
+        border-left-color: transparent !important;
+      }
+
+      .timeline-year {
+        left: 30px;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+      }
+
+      .timeline-title {
+        font-size: 2rem;
+      }
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+  
+  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Story - ArtGram</title>
@@ -106,6 +358,9 @@
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0">
           <img src="/OUR STORY/IMG_5282.JPEG.jpg" class="img-fluid rounded shadow" alt="Our Story">
+        </div>
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="https://source.unsplash.com/random/800x600" class="img-fluid rounded shadow" alt="Our Story">
         </div>
         <div class="col-md-6">
           <h1><strong>ABOUT US</strong></h1>

@@ -1,6 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    
+    :root {
+      --primary: #0f172a;
+      --secondary: #e11d48;
+      --light: #f1f5f9;
+      --highlight: #facc15;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--primary);
+    }
+
+    
+
+    .btn-session {
+      background: var(--secondary);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn-session:hover {
+      background: #be123c;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(225, 29, 72, 0.3);
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, var(--secondary), #be123c);
+      color: white;
+      padding: 100px 0;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .event-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .event-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--highlight);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 2rem;
+    }
+
+    .price-tag {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .btn-book {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    .btn-book:hover {
+      background: #1e293b;
+      color: white;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ArtGram - Events</title>

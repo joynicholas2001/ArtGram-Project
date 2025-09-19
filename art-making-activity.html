@@ -8,10 +8,10 @@
       --secondary: #e11d48;
       --light: #f1f5f9;
       --highlight: #facc15;
-      --slime-green: #32CD32;
-      --slime-purple: #9932CC;
-      --slime-pink: #FF69B4;
-      --slime-blue: #1E90FF;
+      --art-blue: #4A90E2;
+      --art-red: #D0021B;
+      --art-yellow: #F5A623;
+      --art-green: #7ED321;
     }
 
     html {
@@ -26,7 +26,7 @@
 
 
     .hero {
-      background: linear-gradient(135deg, var(--slime-green), var(--slime-purple), var(--slime-pink)), url('https://images.unsplash.com/photo-1587673486475-d72388eb1c82?auto=format&fit=crop&w=1920&q=80') center/cover;
+      background: linear-gradient(135deg, var(--art-blue), var(--art-red), var(--art-yellow)), url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1920&q=80') center/cover;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -44,7 +44,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(45deg, rgba(50, 205, 50, 0.8), rgba(153, 50, 204, 0.8));
+      background: linear-gradient(45deg, rgba(74, 144, 226, 0.8), rgba(208, 2, 27, 0.8));
       z-index: 1;
     }
 
@@ -132,7 +132,7 @@
       left: 0;
       right: 0;
       height: 5px;
-      background: linear-gradient(90deg, var(--slime-green), var(--slime-purple), var(--slime-pink), var(--slime-blue));
+      background: linear-gradient(90deg, var(--art-blue), var(--art-red), var(--art-yellow), var(--art-green));
     }
 
     .content-card:hover {
@@ -140,22 +140,22 @@
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
     }
 
-    .slime-feature {
-      background: linear-gradient(135deg, rgba(50, 205, 50, 0.1), rgba(153, 50, 204, 0.1));
+    .art-feature {
+      background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(208, 2, 27, 0.1));
       border-radius: 15px;
       padding: 30px;
       margin: 20px 0;
-      border-left: 5px solid var(--slime-green);
+      border-left: 5px solid var(--art-blue);
       transition: all 0.3s ease;
     }
 
-    .slime-feature:hover {
+    .art-feature:hover {
       transform: scale(1.02);
-      box-shadow: 0 10px 25px rgba(50, 205, 50, 0.2);
+      box-shadow: 0 10px 25px rgba(74, 144, 226, 0.2);
     }
 
     .duration-card {
-      background: linear-gradient(45deg, var(--slime-pink), var(--slime-purple));
+      background: linear-gradient(45deg, var(--art-red), var(--art-yellow));
       color: white;
       padding: 30px;
       border-radius: 20px;
@@ -244,12 +244,12 @@
     }
 
     .form-control:focus {
-      border-color: var(--slime-green);
-      box-shadow: 0 0 0 0.2rem rgba(50, 205, 50, 0.25);
+      border-color: var(--art-blue);
+      box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
     }
 
     .btn-book {
-      background: linear-gradient(45deg, var(--slime-green), var(--slime-blue));
+      background: linear-gradient(45deg, var(--art-blue), var(--art-green));
       color: white;
       padding: 15px 40px;
       border-radius: 30px;
@@ -262,12 +262,12 @@
     }
 
     .btn-book:hover {
-      background: linear-gradient(45deg, var(--slime-blue), var(--slime-green));
+      background: linear-gradient(45deg, var(--art-green), var(--art-blue));
       transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(50, 205, 50, 0.3);
+      box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
     }
 
-    .slime-stats {
+    .art-stats {
       display: flex;
       justify-content: space-around;
       margin: 40px 0;
@@ -281,7 +281,7 @@
     .stat-number {
       font-size: 3rem;
       font-weight: 900;
-      color: var(--slime-green);
+      color: var(--art-blue);
       display: block;
     }
 
@@ -303,7 +303,7 @@
         font-size: 2.5rem;
       }
       
-      .slime-stats {
+      .art-stats {
         flex-direction: column;
         gap: 20px;
       }
@@ -327,8 +327,8 @@
 
 .nav-btn {
   background: white;
-  border: 2px solid var(--slime-green);
-  color: var(--slime-green);
+  border: 2px solid var(--art-blue);
+  color: var(--art-blue);
   padding: 8px 20px;
   border-radius: 25px;
   font-size: 0.9rem;
@@ -339,7 +339,7 @@
 }
 
 .nav-btn:hover {
-  background: var(--slime-green);
+  background: var(--art-blue);
   color: white;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -356,13 +356,13 @@
 }
 
 .forward-btn {
-  background: var(--slime-green);
+  background: var(--art-blue);
   color: white;
 }
 
 .forward-btn:hover {
-  background: var(--slime-blue);
-  border-color: var(--slime-blue);
+  background: var(--art-green);
+  border-color: var(--art-green);
 }
 
 /* Responsive navigation buttons */
@@ -403,8 +403,8 @@
 
 .date-selector .date-item:hover,
 .date-selector .date-item.selected {
-  border-color: var(--slime-green);
-  background: var(--slime-green);
+  border-color: var(--art-blue);
+  background: var(--art-blue);
   color: white;
   transform: translateY(-2px);
 }
@@ -436,8 +436,8 @@
 
 .location-btn:hover,
 .location-btn.selected {
-  border-color: var(--slime-green);
-  background: var(--slime-green);
+  border-color: var(--art-blue);
+  background: var(--art-blue);
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -468,8 +468,8 @@
 
 .session-box:hover,
 .session-box.selected {
-  border-color: var(--slime-green);
-  background: var(--slime-green);
+  border-color: var(--art-blue);
+  background: var(--art-blue);
   color: white;
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
@@ -531,8 +531,8 @@
 
 .time-slot:hover:not(.sold-out),
 .time-slot.selected {
-  border-color: var(--slime-green);
-  background: var(--slime-green);
+  border-color: var(--art-blue);
+  background: var(--art-blue);
   color: white;
   transform: translateY(-2px);
 }
@@ -559,13 +559,13 @@
   background: white;
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid var(--slime-green);
+  border: 2px solid var(--art-blue);
 }
 
 .total-amount {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--slime-green);
+  color: var(--art-blue);
   text-align: center;
   margin: 15px 0;
   padding: 15px;
@@ -574,7 +574,7 @@
 }
 
 .btn-book {
-  background: linear-gradient(135deg, var(--slime-green), var(--slime-blue));
+  background: linear-gradient(135deg, var(--art-blue), var(--art-green));
   color: white;
   border: none;
   padding: 15px 40px;
@@ -590,290 +590,12 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-
-/* Navigation Button Styles */
-.step-header {
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 15px;
-}
-
-.navigation-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.nav-btn {
-  background: white;
-  border: 2px solid var(--slime-green);
-  color: var(--slime-green);
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-width: 80px;
-}
-
-.nav-btn:hover {
-  background: var(--slime-green);
-  color: white;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.back-btn {
-  border-color: #6c757d;
-  color: #6c757d;
-}
-
-.back-btn:hover {
-  background: #6c757d;
-  color: white;
-}
-
-.forward-btn {
-  background: var(--slime-green);
-  color: white;
-}
-
-.forward-btn:hover {
-  background: var(--slime-blue);
-  border-color: var(--slime-blue);
-}
-
-/* Responsive navigation buttons */
-@media (max-width: 768px) {
-  .step-header {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .navigation-buttons {
-    justify-content: center;
-  }
-  
-  .nav-btn {
-    min-width: 100px;
-  }
-}
-
-/* All previous styles remain the same */
-.booking-step {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-.date-selector .date-item {
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 15px 20px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-width: 100px;
-}
-
-.date-selector .date-item:hover,
-.date-selector .date-item.selected {
-  border-color: var(--slime-green);
-  background: var(--slime-green);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.date-item .day {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.date-item .date {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.date-item .month {
-  font-size: 0.8rem;
-}
-
-.location-btn {
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 20px 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-  min-width: 200px;
-}
-
-.location-btn:hover,
-.location-btn.selected {
-  border-color: var(--slime-green);
-  background: var(--slime-green);
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.location-name {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.location-detail {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.session-box {
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 15px;
-  padding: 25px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-width: 180px;
-  position: relative;
-}
-
-.session-box:hover,
-.session-box.selected {
-  border-color: var(--slime-green);
-  background: var(--slime-green);
-  color: white;
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.session-icon {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.session-name {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.session-duration {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  opacity: 0.8;
-}
-
-.session-price {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #ff6b35;
-}
-
-.session-box.selected .session-price {
-  color: white;
-}
-
-.time-slot {
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 15px 25px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-width: 120px;
-}
-
-.time-slot.available {
-  border-color: #28a745;
-}
-
-.time-slot.filling-fast {
-  border-color: #ffc107;
-  background: #fff8e1;
-}
-
-.time-slot.sold-out {
-  border-color: #dc3545;
-  background: #f8f8f8;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.time-slot:hover:not(.sold-out),
-.time-slot.selected {
-  border-color: var(--slime-green);
-  background: var(--slime-green);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.time-slot .time {
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 5px;
-}
-
-.time-slot .availability {
-  font-size: 0.8rem;
-  opacity: 0.8;
-}
-
-.booking-summary {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.summary-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid var(--slime-green);
-}
-
-.total-amount {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--slime-green);
-  text-align: center;
-  margin: 15px 0;
-  padding: 15px;
-  background: #f8f9fa;
-  border-radius: 8px;
-}
-
-.btn-book {
-  background: linear-gradient(135deg, var(--slime-green), var(--slime-blue));
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  border-radius: 25px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-
-.btn-book:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
   </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ultimate Slime Experience - ArtGram</title>
+  <title>Ultimate Art Making Experience - ArtGram</title>
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="css/slime-play.css">
+    <link rel="stylesheet" href="css/art-making-activity.css">
     
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
  
@@ -956,106 +678,106 @@
             <a class="nav-link" href="contactus.html" data-page="contact">Contact</a>
           </li>
         </ul>
-        <a href="book-session.html" class="btn btn-session">Book a Slime Session</a>
+        <a href="book-session.html" class="btn btn-session">Book an Art Session</a>
       </div>
     </div>
   </nav>
   <!-- Hero -->
   <header class="hero">
     <div class="hero-content">
-      <h1>🌈 INDIA'S FIRST SLIME STUDIO 🌈</h1>
-      <p>We’re proud to host India’s first slime studio, where guests can indulge in the fun and therapeutic process of slime play.</p>
-      <a href="#slime-booking" class="cta-button">
-        🎯 BOOK YOUR SLIME ADVENTURE NOW!
+      <h1>🎨 ART Making🎨</h1>
+      <p>We’re proud to host India’s first interactive art studio, where guests can indulge in the fun and therapeutic process of art making.</p>
+      <a href="#art-booking" class="cta-button">
+        🎯 BOOK YOUR ART ADVENTURE NOW!
       </a>
     </div>
   </header>
 
-  <!-- What is Slime Section -->
+  <!-- What is Art Making Section -->
   <center>
-  <section class="section" id="what-is-slime" style="background: var(--light);">
+  <section class="section" id="what-is-art" style="background: var(--light);">
     <div class="container">
-      <h2>🤔 What is Slime?</h2>
+      <h2>🤔 What is Art Making?</h2>
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <div class="content-card">
             <div class="row">
               <div class="col-md-6">
-                <h3 style="color: var(--slime-green); margin-bottom: 20px;"><strong>THE SLIME</strong></h3>
+                <h3 style="color: var(--art-blue); margin-bottom: 20px;"><strong>THE ART</strong></h3>
                 <p style="font-size: 1.2rem; line-height: 1.8;">
-                  For kids, our Slime Play area is a dream come true as They explore vibrant colors and squishy textures. 
-As an extra treat, they can even personalize their own slime by choosing their favorite color and scent to take home.</p>
+                  For kids and adults, our Art Making area is a dream come true as they explore vibrant colors and various textures. 
+As an extra treat, they can even personalize their own artwork by choosing their favorite colors and medium to take home.</p>
                 
 <strong>WHAT IS INCLUDED</strong>
 <p style="font-size: 2.9rem; line-height: 1.8;"></p>
-                <div class="slime-feature">
-                  <h5 style="color: var(--slime-purple);">SLIME DRAWING</h5>
-                  <p>Learn chemistry while creating masterpieces! Mix, stretch, and discover the fascinating properties of polymers.</p>
+                <div class="art-feature">
+                  <h5 style="color: var(--art-red);">PAINTING</h5>
+                  <p>Learn color theory while creating masterpieces! Mix, blend, and discover the fascinating properties of pigments.</p>
                 </div>
 
-                <div class="slime-feature">
-                  <h5 style="color: var(--slime-pink);">SLIME THROWING</h5>
-                  <p>Choose from 20+ slime types: Fluffy Cloud Slime, Galaxy Glitter Slime, Butter Slime, Clear Slime, and more!</p>
+                <div class="art-feature">
+                  <h5 style="color: var(--art-yellow);">SCULPTING</h5>
+                  <p>Choose from various materials: Clay, Wood, Metal, and more to create 3D art!</p>
                 </div>
 
-                <div class="slime-feature">
-                  <h5 style="color: var(--slime-blue);">SLIME JUMPING</h5>
-                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The tactile experience is incredibly therapeutic!</p>
+                <div class="art-feature">
+                  <h5 style="color: var(--art-green);">DRAWING</h5>
+                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The creative experience is incredibly therapeutic!</p>
                 </div>
 
-                <div class="slime-feature">
-                  <h5 style="color: var(--slime-blue);">SLIME THROWING</h5>
-                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The tactile experience is incredibly therapeutic!</p>
+                <div class="art-feature">
+                  <h5 style="color: var(--art-blue);">PRINTMAKING</h5>
+                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The creative experience is incredibly therapeutic!</p>
                 </div>
 
-                <div class="slime-feature">
-                  <h5 style="color: var(--slime-blue);">MAGNETIC SLIME</h5>
-                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The tactile experience is incredibly therapeutic!</p>
+                <div class="art-feature">
+                  <h5 style="color: var(--art-red);">COLLAGE</h5>
+                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The creative experience is incredibly therapeutic!</p>
                 </div>
 
-                <div class="slime-feature">
-                  <h5 style="color: var(--slime-blue);">SLIME FALLS</h5>
-                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The tactile experience is incredibly therapeutic!</p>
+                <div class="art-feature">
+                  <h5 style="color: var(--art-yellow);">DIGITAL ART</h5>
+                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The creative experience is incredibly therapeutic!</p>
                 </div>
 
-                <div class="slime-feature">
-                  <h5 style="color: var(--slime-blue);">GLOW IN THE DARK SLIME </h5>
-                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The tactile experience is incredibly therapeutic!</p>
+                <div class="art-feature">
+                  <h5 style="color: var(--art-green);">TEXTILE ART</h5>
+                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The creative experience is incredibly therapeutic!</p>
                 </div>
 
-                <div class="slime-feature">
-                  <h5 style="color: var(--slime-blue);">TAKE HOME SLIME WITH CUSTOMISATION </h5>
-                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The tactile experience is incredibly therapeutic!</p>
+                <div class="art-feature">
+                  <h5 style="color: var(--art-blue);">TAKE HOME ART WITH CUSTOMISATION </h5>
+                  <p>Perfect for anxiety relief, ADHD support, and mindfulness. The creative experience is incredibly therapeutic!</p>
                 </div>
               </div>
               <div class="col-md-6">
               <div class="image-gallery">
                 <div class="gallery-item">
-                  <img src="images/SLIME IMAGES/IMG_4561.PNG" alt="Colorful Slime Making" class="gallery-image">
+                  <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" alt="Colorful Painting" class="gallery-image">
                   <div class="image-overlay">
                     <div class="overlay-content">
-                      <h5>Colorful Slime Making</h5>
-                      <p>Create vibrant, stretchy slimes in amazing colors</p>
+                      <h5>Colorful Painting</h5>
+                      <p>Create vibrant, expressive paintings in amazing colors</p>
                     </div>
                   </div>
                 </div>
                 
                 <div class="gallery-item">
-                  <img src="images/SLIME IMAGES/IMG_5291.JPEG.jpg" alt="Kids Playing with Slime" class="gallery-image">
+                  <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=600&q=80" alt="Kids Painting" class="gallery-image">
                   <div class="image-overlay">
                     <div class="overlay-content">
-                      <h5>Kids Playing with Slime</h5>
+                      <h5>Kids Painting</h5>
                       <p>Watch children explore and have endless fun</p>
                     </div>
                   </div>
                 </div>
     
     <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1595950652446-52eeaeaf26ff?auto=format&fit=crop&w=600&q=80" alt="Stretchy Slime Fun" class="gallery-image">
+      <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&w=600&q=80" alt="Abstract Art" class="gallery-image">
       <div class="image-overlay">
         <div class="overlay-content">
-          <h5>Stretchy Slime Fun</h5>
-          <p>Experience the satisfying stretch and texture</p>
+          <h5>Abstract Art</h5>
+          <p>Experience the satisfying process of creating abstract art</p>
         </div>
       </div>
     </div>
@@ -1066,14 +788,14 @@ As an extra treat, they can even personalize their own slime by choosing their f
               </div>
             </div>
             
-            <div class="slime-stats">
+            <div class="art-stats">
               <div class="stat-item">
                 <span class="stat-number">50,000+</span>
-                <span class="stat-label">Happy Customers</span>
+                <span class="stat-label">Happy Artists</span>
               </div>
               <div class="stat-item">
                 <span class="stat-number">25+</span>
-                <span class="stat-label">Slime Varieties</span>
+                <span class="stat-label">Art Mediums</span>
               </div>
               <div class="stat-item">
                 <span class="stat-number">100%</span>
@@ -1099,10 +821,10 @@ As an extra treat, they can even personalize their own slime by choosing their f
       <div class="row">
         <div class="col-md-4 mb-4">
           <div class="duration-card">
-            <h4>🚀 Quick Slime (30 mins)</h4>
-            <h3 style="margin: 20px 0;">₹299</h3>
+            <h4>🚀 Quick Art (30 mins)</h4>
+            <h3 style="margin: 20px 0;">₹399</h3>
             <ul style="list-style: none; padding: 0;">
-              <li>✅ Choose 1 Slime Type</li>
+              <li>✅ Choose 1 Art Medium</li>
               <li>✅ All Materials Included</li>
               <li>✅ Take Home Your Creation</li>
               <li>✅ Perfect for Beginners</li>
@@ -1110,26 +832,26 @@ As an extra treat, they can even personalize their own slime by choosing their f
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="duration-card" style="background: linear-gradient(45deg, var(--slime-green), var(--slime-blue)); transform: scale(1.05);">
+          <div class="duration-card" style="background: linear-gradient(45deg, var(--art-blue), var(--art-green)); transform: scale(1.05);">
             <div style="background: var(--highlight); color: var(--primary); padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; font-weight: 700;">MOST POPULAR</div>
-            <h4>🌟 Ultimate Slime (60 mins)</h4>
-            <h3 style="margin: 20px 0;">₹499</h3>
+            <h4>🌟 Ultimate Art (60 mins)</h4>
+            <h3 style="margin: 20px 0;">₹599</h3>
             <ul style="list-style: none; padding: 0;">
-              <li>✅ Choose 2 Slime Types</li>
+              <li>✅ Choose 2 Art Mediums</li>
               <li>✅ Premium Add-ins Available</li>
-              <li>✅ Mini Slime Science Lesson</li>
+              <li>✅ Mini Art History Lesson</li>
               <li>✅ Perfect for All Ages</li>
             </ul>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="duration-card" style="background: linear-gradient(45deg, var(--slime-purple), var(--slime-pink));">
-            <h4>💎 Premium Slime (90 mins)</h4>
-            <h3 style="margin: 20px 0;">₹799</h3>
+          <div class="duration-card" style="background: linear-gradient(45deg, var(--art-red), var(--art-yellow));">
+            <h4>💎 Premium Art (90 mins)</h4>
+            <h3 style="margin: 20px 0;">₹899</h3>
             <ul style="list-style: none; padding: 0;">
-              <li>✅ Choose 3 Slime Types</li>
+              <li>✅ Choose 3 Art Mediums</li>
               <li>✅ Exclusive Premium Materials</li>
-              <li>✅ Personal Slime Containers</li>
+              <li>✅ Personal Art Kits</li>
               <li>✅ Advanced Techniques</li>
             </ul>
           </div>
@@ -1141,59 +863,59 @@ As an extra treat, they can even personalize their own slime by choosing their f
   <!-- Activity Description Section -->
   <section class="section" style="background: var(--light);">
     <div class="container">
-      <h2>🎨 Slime Activity Menu</h2>
+      <h2>🎨 Art Activity Menu</h2>
       <div class="activity-grid">
         <div class="activity-item">
-          <img src="https://images.unsplash.com/photo-1587673486475-d72388eb1c82?auto=format&fit=crop&w=400&q=80" alt="Fluffy Cloud Slime" class="activity-image">
-          <div class="activity-content">
-            <div class="price-tag">₹349</div>
-            <div class="activity-title">☁️ Fluffy Cloud Slime</div>
-            <p>Super soft and airy! Mix shaving cream with our secret ingredients for the fluffiest slime experience.</p>
-          </div>
-        </div>
-        
-        <div class="activity-item">
-          <img src="https://images.unsplash.com/photo-1609332819996-b1abed918122?auto=format&fit=crop&w=400&q=80" alt="Galaxy Glitter Slime" class="activity-image">
-          <div class="activity-content">
-            <div class="price-tag">₹399</div>
-            <div class="activity-title">🌌 Galaxy Glitter Slime</div>
-            <p>Sparkly and cosmic! Add holographic glitters and cosmic colors to create your own galaxy in a container.</p>
-          </div>
-        </div>
-        
-        <div class="activity-item">
-          <img src="https://images.unsplash.com/photo-1595950652446-52eeaeaf26ff?auto=format&fit=crop&w=400&q=80" alt="Butter Slime" class="activity-image">
-          <div class="activity-content">
-            <div class="price-tag">₹329</div>
-            <div class="activity-title">🧈 Butter Slime</div>
-            <p>Smooth and spreadable like butter! The most satisfying texture that you can stretch and mold effortlessly.</p>
-          </div>
-        </div>
-        
-        <div class="activity-item">
-          <img src="https://images.unsplash.com/photo-1577960444366-97f0b4068919?auto=format&fit=crop&w=400&q=80" alt="Clear Crystal Slime" class="activity-image">
-          <div class="activity-content">
-            <div class="price-tag">₹379</div>
-            <div class="activity-title">💎 Clear Crystal Slime</div>
-            <p>Transparent and mesmerizing! Watch it jiggle and stretch with crystal-clear perfection.</p>
-          </div>
-        </div>
-        
-        <div class="activity-item">
-          <img src="https://images.unsplash.com/photo-1587673486475-d72388eb1c82?auto=format&fit=crop&w=400&q=80" alt="Foam Bead Slime" class="activity-image">
-          <div class="activity-content">
-            <div class="price-tag">₹359</div>
-            <div class="activity-title">🎪 Foam Bead Slime</div>
-            <p>Crunchy and satisfying! Mix colorful foam beads for the ultimate sensory experience with every squish.</p>
-          </div>
-        </div>
-        
-        <div class="activity-item">
-          <img src="https://images.unsplash.com/photo-1609332819996-b1abed918122?auto=format&fit=crop&w=400&q=80" alt="Magnetic Slime" class="activity-image">
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=400&q=80" alt="Acrylic Painting" class="activity-image">
           <div class="activity-content">
             <div class="price-tag">₹449</div>
-            <div class="activity-title">🧲 Magnetic Slime</div>
-            <p>Science meets fun! Watch your slime move and dance with magnetic forces - pure magic in action!</p>
+            <div class="activity-title">🎨 Acrylic Painting</div>
+            <p>Super vibrant and versatile! Mix colors and create beautiful paintings on canvas.</p>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=400&q=80" alt="Watercolor Painting" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹499</div>
+            <div class="activity-title">💧 Watercolor Painting</div>
+            <p>Light and translucent! Learn to control water and create beautiful, flowing paintings.</p>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&w=400&q=80" alt="Oil Painting" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹429</div>
+            <div class="activity-title">🎨 Oil Painting</div>
+            <p>Rich and textured! The most satisfying medium that you can blend and layer effortlessly.</p>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1617575429125-82e049a7ee6e?auto=format&fit=crop&w=400&q=80" alt="Charcoal Drawing" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹479</div>
+            <div class="activity-title">✏️ Charcoal Drawing</div>
+            <p>Dramatic and expressive! Watch your drawings come to life with rich blacks and subtle grays.</p>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=400&q=80" alt="Pastel Drawing" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹459</div>
+            <div class="activity-title">🎨 Pastel Drawing</div>
+            <p>Soft and vibrant! Mix colorful pastels for the ultimate sensory experience with every stroke.</p>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <img src="https://images.unsplash.com/photo-1604782339380-3c61a35129a2?auto=format&fit=crop&w=400&q=80" alt="Digital Painting" class="activity-image">
+          <div class="activity-content">
+            <div class="price-tag">₹549</div>
+            <div class="activity-title">💻 Digital Painting</div>
+            <p>Technology meets fun! Watch your art come to life on a screen - pure magic in action!</p>
           </div>
         </div>
       </div>
@@ -1201,15 +923,15 @@ As an extra treat, they can even personalize their own slime by choosing their f
   </section>
 
   <!-- Booking Section - BookMyShow Style -->
-<section id="slime-booking" class="section" style="background: linear-gradient(135deg, var(--slime-green), var(--slime-blue));">
+<section id="art-booking" class="section" style="background: linear-gradient(135deg, var(--art-blue), var(--art-green));">
   <div class="container">
     <div class="booking-section">
-      <h2 style="color: rgb(21, 161, 6); text-align: center; margin-bottom: 40px;">🎯 BOOK YOUR SLIME EXPERIENCE NOW!</h2>
+      <h2 style="color: rgb(21, 161, 6); text-align: center; margin-bottom: 40px;">🎯 BOOK YOUR ART EXPERIENCE NOW!</h2>
       
       <!-- Step 1: Date Selection (Inline) -->
       <div class="booking-step mb-4">
         <div class="step-header d-flex justify-content-between align-items-center mb-3">
-          <h4 style="color: var(--slime-green); margin: 0;">📅 Select Date</h4>
+          <h4 style="color: var(--art-blue); margin: 0;">📅 Select Date</h4>
           <div class="navigation-buttons">
             <button type="button" class="nav-btn back-btn" id="dateBackBtn" style="display: none;" onclick="goToPreviousStep('date')">
               ← Back
@@ -1227,7 +949,7 @@ As an extra treat, they can even personalize their own slime by choosing their f
       <!-- Step 2: Location Selection -->
       <div class="booking-step mb-4" id="locationStep" style="display: none;">
         <div class="step-header d-flex justify-content-between align-items-center mb-3">
-          <h4 style="color: var(--slime-green); margin: 0;">📍 Select Location</h4>
+          <h4 style="color: var(--art-blue); margin: 0;">📍 Select Location</h4>
           <div class="navigation-buttons">
             <button type="button" class="nav-btn back-btn" id="locationBackBtn" onclick="goToPreviousStep('location')">
               ← Back
@@ -1256,7 +978,7 @@ As an extra treat, they can even personalize their own slime by choosing their f
       <!-- Step 3: Session Selection -->
       <div class="booking-step mb-4" id="sessionStep" style="display: none;">
         <div class="step-header d-flex justify-content-between align-items-center mb-3">
-          <h4 style="color: var(--slime-green); margin: 0;">🎭 Select Session Type</h4>
+          <h4 style="color: var(--art-blue); margin: 0;">🎭 Select Session Type</h4>
           <div class="navigation-buttons">
             <button type="button" class="nav-btn back-btn" id="sessionBackBtn" onclick="goToPreviousStep('session')">
               ← Back
@@ -1267,23 +989,23 @@ As an extra treat, they can even personalize their own slime by choosing their f
           </div>
         </div>
         <div class="session-boxes d-flex flex-wrap gap-3">
-          <div class="session-box" data-session="quick" data-price="299">
+          <div class="session-box" data-session="quick" data-price="399">
             <div class="session-icon">🚀</div>
-            <div class="session-name">Quick Slime</div>
+            <div class="session-name">Quick Art</div>
             <div class="session-duration">30 minutes</div>
-            <div class="session-price">₹299</div>
+            <div class="session-price">₹399</div>
           </div>
-          <div class="session-box" data-session="ultimate" data-price="499">
+          <div class="session-box" data-session="ultimate" data-price="599">
             <div class="session-icon">🌟</div>
-            <div class="session-name">Ultimate Slime</div>
+            <div class="session-name">Ultimate Art</div>
             <div class="session-duration">60 minutes</div>
-            <div class="session-price">₹499</div>
+            <div class="session-price">₹599</div>
           </div>
-          <div class="session-box" data-session="premium" data-price="799">
+          <div class="session-box" data-session="premium" data-price="899">
             <div class="session-icon">💎</div>
-            <div class="session-name">Premium Slime</div>
+            <div class="session-name">Premium Art</div>
             <div class="session-duration">90 minutes</div>
-            <div class="session-price">₹799</div>
+            <div class="session-price">₹899</div>
           </div>
         </div>
       </div>
@@ -1291,7 +1013,7 @@ As an extra treat, they can even personalize their own slime by choosing their f
       <!-- Step 4: Time Slot Selection -->
       <div class="booking-step mb-4" id="timeStep" style="display: none;">
         <div class="step-header d-flex justify-content-between align-items-center mb-3">
-          <h4 style="color: var(--slime-green); margin: 0;">⏰ Select Time Slot</h4>
+          <h4 style="color: var(--art-blue); margin: 0;">⏰ Select Time Slot</h4>
           <div class="navigation-buttons">
             <button type="button" class="nav-btn back-btn" id="timeBackBtn" onclick="goToPreviousStep('time')">
               ← Back
@@ -1328,7 +1050,7 @@ As an extra treat, they can even personalize their own slime by choosing their f
       <!-- Step 5: Personal Details -->
       <div class="booking-step mb-4" id="detailsStep" style="display: none;">
         <div class="step-header d-flex justify-content-between align-items-center mb-3">
-          <h4 style="color: var(--slime-green); margin: 0;">👤 Your Details</h4>
+          <h4 style="color: var(--art-blue); margin: 0;">👤 Your Details</h4>
           <div class="navigation-buttons">
             <button type="button" class="nav-btn back-btn" id="detailsBackBtn" onclick="goToPreviousStep('details')">
               ← Back
@@ -1367,7 +1089,7 @@ As an extra treat, they can even personalize their own slime by choosing their f
       <!-- Booking Summary & Proceed -->
       <div class="booking-summary" id="bookingSummary" style="display: none;">
         <div class="summary-card">
-          <h5 style="color: var(--slime-green); margin-bottom: 15px;">📋 Booking Summary</h5>
+          <h5 style="color: var(--art-blue); margin-bottom: 15px;">📋 Booking Summary</h5>
           <div id="summaryDetails">
             <p>Your selections will appear here.</p>
           </div>
@@ -1750,10 +1472,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <h5 class="mb-3">🎨 ArtGram - India's #1 Slime Destination</h5>
-          <p>Where creativity meets community. Join us for unforgettable slime experiences that inspire and delight!</p>
+          <h5 class="mb-3">🎨 ArtGram - India's #1 Art Destination</h5>
+          <p>Where creativity meets community. Join us for unforgettable art experiences that inspire and delight!</p>
           <div class="mt-3">
-            <strong>📞 Slime Hotline: +91 7358484266</strong><br>
+            <strong>📞 Art Hotline: +91 7358484266</strong><br>
             <small>Available: Mon-Sat 10AM-8PM, Sun 11AM-6PM</small>
           </div>
         </div>
@@ -1763,17 +1485,17 @@ document.addEventListener('DOMContentLoaded', function() {
             <a href="activities.html" class="text-white text-decoration-none">Activities</a>
             <a href="events.html" class="text-white text-decoration-none">Events</a>
             <a href="shop.html" class="text-white text-decoration-none">Shop</a>
-            <a href="#slime-booking" class="text-white text-decoration-none">Book Slime Session</a>
+            <a href="#art-booking" class="text-white text-decoration-none">Book Art Session</a>
           </div>
           <div class="mt-3">
-            <strong>Our Slime Studios:</strong><br>
+            <strong>Our Art Studios:</strong><br>
             <small>🏛️ Hyderabad • 🌟 Bangalore • 🏞️ Vijayawada</small>
           </div>
         </div>
       </div>
       <hr class="my-4">
       <div class="text-center">
-        <p class="mb-0">&copy; 2025 ArtGram. India's Ultimate Slime Experience! Made with ❤️ and lots of slime.</p>
+        <p class="mb-0">&copy; 2025 ArtGram. India's Ultimate Art Experience! Made with ❤️ and lots of creativity.</p>
       </div>
     </div>
   </footer>
@@ -1781,52 +1503,52 @@ document.addEventListener('DOMContentLoaded', function() {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Package details display
-    document.getElementById('slimePackage').addEventListener('change', function() {
+    document.getElementById('artPackage').addEventListener('change', function() {
       const packageDetails = document.getElementById('packageDetails');
       const selected = this.value;
       
       const details = {
-        'quick': '✨ Perfect for first-time slimers! Choose 1 amazing slime type.',
-        'ultimate': '🌟 MOST POPULAR! Create 2 different slimes + mini science lesson.',
-        'premium': '💎 VIP Experience! 3 slime types + exclusive premium materials.'
+        'quick': '✨ Perfect for first-time artists! Choose 1 amazing art medium.',
+        'ultimate': '🌟 MOST POPULAR! Create with 2 different mediums + mini art history lesson.',
+        'premium': '💎 VIP Experience! 3 art mediums + exclusive premium materials.'
       };
       
       packageDetails.textContent = details[selected] || '';
     });
 
     // Form submission
-    document.getElementById('slimeBookingForm').addEventListener('submit', function(e) {
+    document.getElementById('artBookingForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
-      const name = document.getElementById('slimeName').value;
-      const phone = document.getElementById('slimePhone').value;
-      const date = document.getElementById('slimeDate').value;
-      const time = document.getElementById('slimeTime').value;
-      const package = document.getElementById('slimePackage').value;
-      const location = document.getElementById('slimeLocation').value;
+      const name = document.getElementById('artName').value;
+      const phone = document.getElementById('artPhone').value;
+      const date = document.getElementById('artDate').value;
+      const time = document.getElementById('artTime').value;
+      const package = document.getElementById('artPackage').value;
+      const location = document.getElementById('artLocation').value;
       
       if (!name || !phone || !date || !time || !package || !location) {
-        alert('🌈 Please fill in all required fields to book your amazing slime adventure!');
+        alert('🎨 Please fill in all required fields to book your amazing art adventure!');
         return;
       }
       
       // Success message
-      alert(`🎉 AMAZING! Your slime adventure is booked!\n\n👋 Hi ${name}!\n📅 Date: ${date}\n⏰ Time: ${time}\n📍 Location: ${location}\n\nWe'll call you within 2 hours to confirm! Get ready for the BEST slime experience ever! 🌈✨`);
+      alert(`🎉 AMAZING! Your art adventure is booked!\n\n👋 Hi ${name}!\n📅 Date: ${date}\n⏰ Time: ${time}\n📍 Location: ${location}\n\nWe'll call you within 2 hours to confirm! Get ready for the BEST art experience ever! 🎨✨`);
       
       this.reset();
       document.getElementById('packageDetails').textContent = '';
     });
 
     // Auto-scroll carousel
-    var slimeCarousel = new bootstrap.Carousel(document.getElementById('slimeCarousel'), {
+    var artCarousel = new bootstrap.Carousel(document.getElementById('artCarousel'), {
       interval: 3000,
       wrap: true,
       pause: 'hover'
     });
 
-    // Function to scroll to slime booking section with proper offset
-    function scrollToSlimeBooking() {
-      const bookingSection = document.getElementById('slime-booking');
+    // Function to scroll to art booking section with proper offset
+    function scrollToArtBooking() {
+      const bookingSection = document.getElementById('art-booking');
       if (bookingSection) {
         // Calculate the offset for fixed navbar (approximately 80px)
         const navbarHeight = 80;
@@ -1841,7 +1563,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Focus on first input field after scroll completes
         setTimeout(() => {
-          const nameInput = document.getElementById('slimeName');
+          const nameInput = document.getElementById('artName');
           if (nameInput) {
             nameInput.focus();
           }
@@ -1849,28 +1571,28 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    // Enhanced scroll to booking buttons - handles all links to #slime-booking
-    document.querySelectorAll('a[href="#slime-booking"]').forEach(link => {
+    // Enhanced scroll to booking buttons - handles all links to #art-booking
+    document.querySelectorAll('a[href="#art-booking"]').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        scrollToSlimeBooking();
+        scrollToArtBooking();
       });
     });
 
-    // Check if page loaded with #slime-booking hash and scroll to it
+    // Check if page loaded with #art-booking hash and scroll to it
     window.addEventListener('load', function() {
-      if (window.location.hash === '#slime-booking') {
+      if (window.location.hash === '#art-booking') {
         // Small delay to ensure page is fully loaded
         setTimeout(() => {
-          scrollToSlimeBooking();
+          scrollToArtBooking();
         }, 300);
       }
     });
 
     // Handle hash changes (when user clicks back/forward)
     window.addEventListener('hashchange', function() {
-      if (window.location.hash === '#slime-booking') {
-        scrollToSlimeBooking();
+      if (window.location.hash === '#art-booking') {
+        scrollToArtBooking();
       }
     });
   </script>
